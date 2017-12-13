@@ -1,4 +1,4 @@
-#Agence 824
+# Agence 824
 ## Installation 
 ### Install wamp
 ### Install NodeJs
@@ -11,5 +11,5 @@ from your project :
 to setup the database, check the .env file
 ### Install Node dependecies
 from your project :
-- npm install 
+- npm install’ 
 wait, and pray!
