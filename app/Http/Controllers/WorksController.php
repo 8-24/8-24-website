@@ -1,5 +1,6 @@
 <?php
 // fork update
+// update update
 namespace App\Http\Controllers;
 
 use App\SeoPage;
