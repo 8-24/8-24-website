@@ -16,10 +16,10 @@ Now the php side should work
 - php artisan serve 
 
 ### setting git
-git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
-cd into/cloned/fork-repo
-git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
-git fetch upstream
+- git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
+- cd into/cloned/fork-repo
+- git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
+- git fetch upstream
 
 
 ## Usefull commands
