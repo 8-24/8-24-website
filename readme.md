@@ -25,9 +25,9 @@ Now the php side should work
 ## Usefull commands
 - To compile sass & JS
 - `npm run dev`
-To refresh the database
+####To refresh the database
 - `php artisan migrate:refresh`
-To fill the database with seeder, to do after the refresh or it will be many duplications
+####To fill the database with seeder, to do after the refresh or it will be many duplications
 - `php artisan db:seed`
 
 To add new commit 
