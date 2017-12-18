@@ -23,17 +23,14 @@ Now the php side should work
 
 
 ## Usefull commands
-- To compile sass & JS
-- `npm run dev`
-To refresh the database
-- `php artisan migrate:refresh`
-To fill the database with seeder, to do after the refresh or it will be many duplications
-- `php artisan db:seed`
+- `npm run dev` To compile sass & JS
+- `php artisan migrate:refresh` To refresh the database 
+- `php artisan db:seed` To fill the database with seeder, to do after the refresh or it will be many duplications
 
-To add new commit 
+#### To add new commit
 - `git commit -m "commit description"`
-To push commit online
+#### To push commit online
 - `git push -u origin`
-To get updates from another collaborator
+#### To get updates from another collaborator
 - `git pull upstream master`
 

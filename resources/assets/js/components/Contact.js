@@ -55,6 +55,7 @@ export default class Home extends Component{
 
       }
 
+
     }
     //alert('handle form');
   }
