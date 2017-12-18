@@ -3,7 +3,6 @@
 
 @section('content')
     <div class="container">
-        MON COMMIT
     @if($data != null && $data != 'undefined' && !empty($data))
             <div class="row">
                 <div class="col-sm-12">
