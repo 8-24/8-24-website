@@ -291,6 +291,9 @@ body{
 .work-link a {
   color: $black;
 }
+.work-link a:hover{
+  cursor: url('/img/cursor_violet.png'), auto!important;
+}
 
 .invisible-bg{
   background: transparent!important;

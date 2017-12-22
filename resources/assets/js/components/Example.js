@@ -14,6 +14,7 @@ import BlogPost from './BlogPost';
 import Labs from './Labs';
 import CreativeCoding from './CreativeCoding';
 import LabsPost from './LabsPost';
+import Error404 from './error/404';
 
 export default class Example extends Component {
     constructor(props){
@@ -56,7 +57,6 @@ export default class Example extends Component {
             nav.classList.remove('hidden-nav');
             nav.classList.add('displayed-nav');
         }
-
     };
 
     render() {
@@ -103,19 +103,15 @@ export default class Example extends Component {
                       </nav>
                       <div className="page-content">
                         <Route exact path="/" component={Home}/>
-
                         <Route exact path="/works" component={Works}/>
                         <Route path="/works/:slug" component={WorkPost} />
-
                         <Route exact path="/blog" component={Blog} />
                         <Route path="/blog/:slug" component={BlogPost} />
-
                         <Route exact path="/labs" component={Labs} />
                         <Route exact path="/labs/creative-coding" component={CreativeCoding} />
                         <Route path="/labs/:category/:slug" component={LabsPost} />
-
                         <Route exact path="/contact" component={Contact}/>
-
+                        <Route component={Error404} /> 
                       </div>
                   </div>
                 </div>

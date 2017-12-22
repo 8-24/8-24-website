@@ -1,8 +1,9 @@
 
 
-
-// modes : grey or black
-// page : illustration , color
+/*
+* @param {String}  mode - one of these two modes grey or black
+* @param {String}  page - one of these two pages illustration or color
+*/
 export function NavBarLogic(mode, page){
 
     if(mode == "black"){

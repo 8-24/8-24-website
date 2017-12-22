@@ -17,28 +17,12 @@ export default class Labs extends Component{
     }
   }
   componentDidMount(){
-    /*
-    var wrap = document.getElementById("app-agile-container");
-    wrap.className = "black-background";
-    document.getElementById('nav-default-logo').style.display = 'none';    // hide default 8-24 logo
-    document.getElementById('nav-lab-logo').style.display = 'block';      // show default 8-24 logo
-    document.getElementById('side-nav-home-logo').style.display = 'block'; // show side home btn
-    document.getElementById('side-nav-labs-logo').style.display = 'none'; // hide labs logo
-    document.getElementById('red-burger').style.display = 'none'; // hide red burger
-    document.getElementById('yellow-burger').style.display = 'block';
-
-    document.getElementById('close-nav-btn-red').style.display = 'none'; // hide red btn
-    document.getElementById('close-nav-btn-yellow').style.display = 'block'; // show yellow btn
-    */
     NavBarLogic("black", "illustration");
-
     axios.get('http://127.0.0.1:8000/api/labs/categories')
       .then(response => {
         this.setState({categories: response.data})
       });
-
   }
-
 
   changeText(id){
     var idCatched = id.target.id;
@@ -77,6 +61,9 @@ export default class Labs extends Component{
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto aut cumque eaque eum, facere fugiat inventore ipsa molestias mollitia nam necessitatibus numquam quam quisquam rem tempora tempore tenetur.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus doloribus et facere nam officia perferendis! A, atque deleniti dolorem fuga in optio quae saepe sint vel. Accusamus id, iure?
         </p>
+        <Link to="/">
+          <img src="/img/arrow_back_white.svg"  className="arrow-back" />
+        </Link>
       </div>
 
     )

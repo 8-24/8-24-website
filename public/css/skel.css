@@ -194,7 +194,9 @@ p {
 a {
     color: #561fb9; }
 a:hover {
-    color: #561fb9; }
+    color: #561fb9; 
+    cursor: url('../img/cursor_violet.png'), auto!important;
+}
 
 
 /* Buttons
