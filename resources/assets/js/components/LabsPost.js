@@ -19,6 +19,9 @@ export default class LabsPost extends Component{
     document.getElementById('red-burger').style.display = 'none'; // hide red burger
     document.getElementById('yellow-burger').style.display = 'block';
 
+    document.getElementById('close-nav-btn-red').style.display = 'block';
+    document.getElementById('close-nav-btn-yellow').style.display = 'none';
+
     var path = this.props.location.pathname;
     axios.get('http://127.0.0.1:8000/api'+path)
       .then(response => {

@@ -22,6 +22,9 @@ export default class CreativeCoding extends Component{
     document.getElementById('side-nav-home-logo').style.display = 'block'; // hide side home btn
     document.getElementById('red-burger').style.display = 'none'; // hide red burger
     document.getElementById('yellow-burger').style.display = 'block';
+
+    document.getElementById('close-nav-btn-red').style.display = 'none';
+    document.getElementById('close-nav-btn-yellow').style.display = 'block';
     var script;
     axios.get('http://127.0.0.1:8000/api/creative-coding')
       .then(response => {

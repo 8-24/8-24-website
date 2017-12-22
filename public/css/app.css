@@ -94,7 +94,7 @@ body {
 #side-nav-home-logo {
   position: fixed;
   top: 35%;
-  left: 0px;
+  left: -5%;
   width: auto;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -103,7 +103,7 @@ body {
 #side-nav-labs-logo {
   position: fixed;
   top: 35%;
-  left: 0px;
+  left: -5%;
   width: auto;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -299,7 +299,7 @@ body {
     float: left;
   }
 
-  #close-nav-btn {
+  .close-nav-btn {
     width: 3%;
     -webkit-transition: 100ms;
     transition: 100ms;
@@ -308,7 +308,7 @@ body {
     top: 5%;
   }
 
-  #close-nav-btn:hover {
+  .close-nav-btn:hover {
     cursor: pointer;
   }
 }
@@ -335,7 +335,7 @@ body {
     float: left;
   }
 
-  #close-nav-btn {
+  .close-nav-btn {
     width: 2%;
     -webkit-transition: 100ms;
     transition: 100ms;
@@ -344,7 +344,7 @@ body {
     top: 5%;
   }
 
-  #close-nav-btn:hover {
+  .close-nav-btn:hover {
     cursor: pointer;
     -webkit-transition: 100ms;
     transition: 100ms;

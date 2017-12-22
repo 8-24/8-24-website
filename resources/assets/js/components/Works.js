@@ -6,7 +6,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom'
-
+import {NavBarLogic} from '../logic/NavLogic';
 export default class Works extends Component {
   constructor(props) {
     super(props);
@@ -17,13 +17,7 @@ export default class Works extends Component {
   }
 
   componentDidMount() {
-    var wrap = document.getElementById("app-agile-container");
-    wrap.className = "white-background";
-    document.getElementById('nav-default-logo').style.display = 'block';     // hide default 8-24 logo
-    document.getElementById('nav-lab-logo').style.display = 'none';
-    document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
-    document.getElementById('red-burger').style.display = 'block';
-    document.getElementById('yellow-burger').style.display = 'none';
+    NavBarLogic("grey");
 
     if(this.props.display == "preview"){
       axios.get('http://127.0.0.1:8000/api/works/limit/4')

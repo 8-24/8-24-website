@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
-
+import {NavBarLogic} from '../logic/NavLogic';
 
 export default class Home extends Component{
 
   componentDidMount(){
-
-    var wrap = document.getElementById("app-agile-container");
-    wrap.className = "white-background";
-    document.getElementById('nav-default-logo').style.display = 'block';     // hide default 8-24 logo
-    document.getElementById('nav-lab-logo').style.display = 'none';       // hide default 8-24 logo
-    document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
-    document.getElementById('red-burger').style.display = 'block';
-    document.getElementById('yellow-burger').style.display = 'none';
-
+    NavBarLogic("grey");
   }
 
   validateEmail(email) {

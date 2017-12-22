@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Parser from 'html-react-parser';
-
+import {NavBarLogic} from '../logic/NavLogic';
 export default class WorkPost extends Component{
   constructor(props){
     super(props);
@@ -9,13 +9,7 @@ export default class WorkPost extends Component{
 
 
   componentDidMount(){
-    var wrap = document.getElementById("app-agile-container");
-    wrap.className = "white-background";
-    document.getElementById('nav-default-logo').style.display = 'block';
-    document.getElementById('nav-lab-logo').style.display = 'none';
-    document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
-    document.getElementById('red-burger').style.display = 'block';
-    document.getElementById('yellow-burger').style.display = 'none';
+    NavBarLogic("grey");
 
     var path = this.props.location.pathname;
 

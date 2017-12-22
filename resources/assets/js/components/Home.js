@@ -3,7 +3,7 @@ import Works from './Works';
 import Blog from './blog';
 import Contact from './Contact';
 import Parser from 'html-react-parser';
-
+import {NavBarLogic} from '../logic/NavLogic';
 export default class Home extends Component{
   constructor(props){
     super(props);
@@ -20,14 +20,7 @@ export default class Home extends Component{
     //this.changeText = this.changeText.bind(this);
   }
   componentDidMount(){
-    var wrap = document.getElementById("app-agile-container");
-    wrap.className = "white-background";
-    document.getElementById('nav-default-logo').style.display = 'block';     // hide default 8-24 logo
-    document.getElementById('nav-lab-logo').style.display = 'none';       // hide default 8-24 logo
-    document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
-    document.getElementById('red-burger').style.display = 'block';
-    document.getElementById('yellow-burger').style.display = 'none';
-
+    NavBarLogic("grey");
     axios.get('http://127.0.0.1:8000/api/home')
       .then(response => {
         //console.log(response.data);

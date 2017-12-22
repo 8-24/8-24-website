@@ -20,10 +20,15 @@ export default class Labs extends Component{
     var wrap = document.getElementById("app-agile-container");
     wrap.className = "black-background";
     document.getElementById('nav-default-logo').style.display = 'none';    // hide default 8-24 logo
-    document.getElementById('nav-lab-logo').style.display = 'block';      // hide default 8-24 logo
-    document.getElementById('side-nav-home-logo').style.display = 'block'; // hide side home btn
+    document.getElementById('nav-lab-logo').style.display = 'block';      // show default 8-24 logo
+    document.getElementById('side-nav-home-logo').style.display = 'block'; // show side home btn
+    document.getElementById('side-nav-labs-logo').style.display = 'none'; // hide labs logo
     document.getElementById('red-burger').style.display = 'none'; // hide red burger
     document.getElementById('yellow-burger').style.display = 'block';
+
+    document.getElementById('close-nav-btn-red').style.display = 'none'; // hide red btn
+    document.getElementById('close-nav-btn-yellow').style.display = 'block'; // show yellow btn
+
 
     axios.get('http://127.0.0.1:8000/api/labs/categories')
       .then(response => {

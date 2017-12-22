@@ -31,6 +31,7 @@ export default class Example extends Component {
             document.getElementById('display-nav-bg').className = 'hidden-nav-bg';
         }else{
             //alert('open nav');
+            
             if( 1 == 2) // check if lab
             {
               nav.className = "displayed-black-nav";
@@ -38,6 +39,7 @@ export default class Example extends Component {
               nav.className = 'displayed-nav';
               document.getElementById('display-nav-bg').className = 'showed-nav-bg';
             }
+            
         }
 
     };
@@ -71,7 +73,8 @@ export default class Example extends Component {
                         </div>
                         <div id="display-nav" className="hidden-nav">
                           <li className="twelve columns"  onClick={this.navInteract} >
-                            <img id="close-nav-btn" src="/img/close_menu-01.svg" />
+                            <img className="close-nav-btn" id="close-nav-btn-red" src="/img/close_menu-red.svg" />
+                            <img className="close-nav-btn" id="close-nav-btn-yellow" src="/img/close_menu-yellow.svg" />
                           </li>
                           <ul>
                               <li><Link onClick={this.navInteract} to="/">Home</Link></li>
