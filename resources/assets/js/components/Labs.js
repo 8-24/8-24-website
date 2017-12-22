@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Link
 } from 'react-router-dom'
+import {NavBarLogic} from '../logic/NavLogic';
 
 export default class Labs extends Component{
   constructor(props){
@@ -16,7 +17,7 @@ export default class Labs extends Component{
     }
   }
   componentDidMount(){
-
+    /*
     var wrap = document.getElementById("app-agile-container");
     wrap.className = "black-background";
     document.getElementById('nav-default-logo').style.display = 'none';    // hide default 8-24 logo
@@ -28,7 +29,8 @@ export default class Labs extends Component{
 
     document.getElementById('close-nav-btn-red').style.display = 'none'; // hide red btn
     document.getElementById('close-nav-btn-yellow').style.display = 'block'; // show yellow btn
-
+    */
+    NavBarLogic("black");
 
     axios.get('http://127.0.0.1:8000/api/labs/categories')
       .then(response => {

@@ -35,7 +35,7 @@ export default class Blog extends Component{
   ButtonDisplayMore(){
     if(this.props.display == "preview"){
       return <div className="row">
-        <Link to="/blog"><h2>Autres Posts</h2></Link>
+        <Link to="/blog"><h2>Voir tout +</h2></Link>
       </div>
 
     }

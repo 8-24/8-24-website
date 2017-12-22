@@ -154,23 +154,23 @@ body {
   z-index: 4;
   width: 100vw;
   height: 100vh;
-  color: black;
   display: block;
-  background-color: #eaeaea;
   text-align: center;
   left: -25%;
 }
 
-.displayed-black-nav {
-  position: absolute;
-  top: 0px;
-  z-index: 4;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  display: block;
+.grey-nav {
+  color: black !important;
+  background-color: #eaeaea;
+}
+
+.black-nav {
+  color: white !important;
   background-color: #12000e;
-  left: -25%;
+}
+
+.black-nav a {
+  color: white !important;
 }
 
 #display-nav li {

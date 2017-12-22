@@ -160,29 +160,29 @@ body{
   color: black;
   stroke: black;
 }
+
 .displayed-nav{
   position: absolute;
   top: 0px;
   z-index:4;
   width: 100vw;
   height: 100vh;
-  color: black;
   display: block;
-  background-color: $grey;
   text-align: center;
   left: -25%;
 }
 
-.displayed-black-nav{
-  position: absolute;
-  top: 0px;
-  z-index:4;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  display: block;
+.grey-nav{
+  color: black!important;
+  background-color:$grey;
+}
+
+.black-nav{
+  color: white!important;
   background-color: $body-black-bg;
-  left: -25%;
+}
+.black-nav a {
+  color: $white;
 }
 
 

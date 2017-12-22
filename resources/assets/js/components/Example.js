@@ -25,21 +25,13 @@ export default class Example extends Component {
     navInteract()
     {
         var nav = document.getElementById('display-nav');
-        if(nav.className == 'displayed-nav' || nav.className == 'displayed-black-nav'){
-            //alert('close nav');
-            nav.className = 'hidden-nav';
-            document.getElementById('display-nav-bg').className = 'hidden-nav-bg';
+        if(nav.classList.contains('displayed-nav'))
+        {
+            nav.classList.remove('displayed-nav');
+            nav.classList.add('hidden-nav');
         }else{
-            //alert('open nav');
-            
-            if( 1 == 2) // check if lab
-            {
-              nav.className = "displayed-black-nav";
-            }else { // else all other pages
-              nav.className = 'displayed-nav';
-              document.getElementById('display-nav-bg').className = 'showed-nav-bg';
-            }
-            
+            nav.classList.remove('hidden-nav');
+            nav.classList.add('displayed-nav');
         }
 
     };
