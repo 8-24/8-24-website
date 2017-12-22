@@ -51,8 +51,6 @@ export default class Home extends Component{
         // mail not valid
         //alert('mail pas valide');
         document.getElementById('message-mail').className += ' input-warning';
-
-
       }
 
 

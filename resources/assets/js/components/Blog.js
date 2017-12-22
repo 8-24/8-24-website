@@ -57,17 +57,19 @@ export default class Blog extends Component{
         return <div className="three columns margin-top-fifty" key={item.id}>
           <div className="work-link" >
             <Link to={`/blog/${item.slug}`} ><h2 id={item.slug} >{item.title}</h2></Link>
-            <ProgressiveImage
-              id={item.slug}
-              //onClick={this.openPost.bind(this)}
-              src={item.cover}
-              placeholder={item.cover}
-              style={{
-                height: 300,
-                backgroundSize: 'contain',
-                backgroundPosition: '',
-              }}
-            />
+            <Link to={`/blog/${item.slug}`} >
+              <ProgressiveImage
+                id={item.slug}
+                //onClick={this.openPost.bind(this)}
+                src={item.cover}
+                placeholder={item.cover}
+                style={{
+                  height: 300,
+                  backgroundSize: 'contain',
+                  backgroundPosition: '',
+                }}
+              />
+            </Link>
           </div>
         </div>
       }

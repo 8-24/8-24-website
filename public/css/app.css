@@ -298,6 +298,19 @@ body {
   .home-section-title-wrap {
     float: left;
   }
+
+  #close-nav-btn {
+    width: 3%;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    position: fixed;
+    right: 10%;
+    top: 5%;
+  }
+
+  #close-nav-btn:hover {
+    cursor: pointer;
+  }
 }
 
 /* Larger than tablet */
@@ -320,6 +333,21 @@ body {
 
   .home-section-title-wrap {
     float: left;
+  }
+
+  #close-nav-btn {
+    width: 2%;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    position: fixed;
+    right: 10%;
+    top: 5%;
+  }
+
+  #close-nav-btn:hover {
+    cursor: pointer;
+    -webkit-transition: 100ms;
+    transition: 100ms;
   }
 }
 

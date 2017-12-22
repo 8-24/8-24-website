@@ -34,7 +34,6 @@ Now the php side should work
 - `php artisan migrate:refresh`
 ####To fill the database with seeder, to do after the refresh or it will be many duplications
 - `php artisan db:seed`
->>>>>>> 383cdde49b09bb4df38ccfed9cfabef2f0a02f25
 
 #### To add new commit
 - `git commit -m "commit description"`

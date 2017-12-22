@@ -70,7 +70,9 @@ export default class Example extends Component {
                           </div>
                         </div>
                         <div id="display-nav" className="hidden-nav">
-                          <li  onClick={this.navInteract} >X</li>
+                          <li className="twelve columns"  onClick={this.navInteract} >
+                            <img id="close-nav-btn" src="/img/close_menu-01.svg" />
+                          </li>
                           <ul>
                               <li><Link onClick={this.navInteract} to="/">Home</Link></li>
                               <li><Link onClick={this.navInteract} to="/works">Works</Link></li>

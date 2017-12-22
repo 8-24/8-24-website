@@ -37,6 +37,8 @@ body{
   font-family: "SansProReg", Helvetica, Arial, sans-serif;
   margin:0px;
 }
+
+
 .block-preview{
   float: left;
   width: 100%;
@@ -70,10 +72,6 @@ body{
   width:100%;
   height: 100%;
   background: url("../../../public/img/fond_desk_content.png") no-repeat center center;
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
-  //background-size: cover;
   background-attachment: fixed;
 
 }
@@ -183,21 +181,17 @@ body{
   display: block;
   background-color: $body-black-bg;
 }
-
 #display-nav li{
   list-style-type: none;
 }
-
 #display-nav a:hover{
   transition: 100ms;
   color: $red!important;
 }
-
 #display-nav-bg{
   width: 100%;
   height: 100%;
 }
-
 .showed-nav-bg{
   width: 100%;
   height: 100%;
@@ -205,11 +199,9 @@ body{
   z-index: 2;
   background-color: $grey;
 }
-
 .hidden-nav-bg{
   display: none;
 }
-
 .displayed-nav a{
   color:black;
   font-size: 64px;
@@ -217,18 +209,15 @@ body{
 .hidden-nav{
   display: none;
 }
-
 .display-nav-close-btn{
   float: right;
   color: $red;
   font-size: 32px;
 }
-
 .home-section-link{
   transition: 100ms;
   font-size: 54px;
   font-family: SansProBold, Helvetica, Arial, sans-serif;
-
 }
 
 
@@ -273,7 +262,6 @@ body{
   margin-top: 200px;
 }
 
-
 /* image & img transition*/
 .image { width: 100%}
 .image-loaded { opacity: 1; }
@@ -309,6 +297,18 @@ body{
   .home-section-title-wrap{
     float: left;
   }
+  #close-nav-btn{
+    width: 3%;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    position: fixed;
+    right: 10%;
+    top: 5%;
+  }
+
+  #close-nav-btn:hover{
+    cursor: pointer;
+  }
 
 }
 
@@ -333,6 +333,20 @@ body{
   }
   .home-section-title-wrap{
     float: left;
+  }
+
+  #close-nav-btn{
+    width: 2%;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    position: fixed;
+    right: 10%;
+    top: 5%;
+  }
+  
+  #close-nav-btn:hover{
+    cursor: pointer;
+    transition: 100ms;
   }
 
 

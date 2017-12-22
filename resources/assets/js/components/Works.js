@@ -61,17 +61,19 @@ export default class Works extends Component {
                     <Link to={`/works/${item.slug}`} >
                       <h2 id={item.slug}>{item.title}</h2>
                     </Link>
-                    <ProgressiveImage
-                      id={item.slug}
-                      //onClick={this.openGalery.bind(this)}
-                      src={item.cover}
-                      placeholder={item.cover}
-                      style={{
-                        height: 300,
-                        backgroundSize: 'contain',
-                        backgroundPosition: '',
-                      }}
-                    />
+                    <Link to={`/works/${item.slug}`} >
+                      <ProgressiveImage
+                        id={item.slug}
+                        //onClick={this.openGalery.bind(this)}
+                        src={item.cover}
+                        placeholder={item.cover}
+                        style={{
+                          height: 300,
+                          backgroundSize: 'contain',
+                          backgroundPosition: '',
+                        }}
+                      />
+                    </Link>
                 </div>
              </div>
       }
