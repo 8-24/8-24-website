@@ -17,6 +17,9 @@ export function NavBarLogic(mode){
         document.getElementById('close-nav-btn-yellow').style.display = 'block'; // show yellow btn
         document.getElementById('display-nav').className = "";
         document.getElementById('display-nav').className = "hidden-nav black-nav ";
+
+        document.getElementById('main-nav-wrap').classList.remove('grey-nav');
+        document.getElementById('main-nav-wrap').classList.add('black-nav');
     } else
     {
         var wrap = document.getElementById("app-agile-container");
@@ -32,6 +35,9 @@ export function NavBarLogic(mode){
 
         document.getElementById('display-nav').className = "";
         document.getElementById('display-nav').className = "hidden-nav grey-nav ";
+
+        document.getElementById('main-nav-wrap').classList.remove('black-nav');
+        document.getElementById('main-nav-wrap').classList.add('grey-nav');
     }
 
 

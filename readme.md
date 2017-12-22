@@ -1,8 +1,5 @@
 # Agence 824
 ## Installation 
-### Install wamp
-### Install NodeJs
-https://www.youtube.com/watch?v=53U0TBKFwUw
 
 ### Install Database
 Create database named 8-24 in your database manager
@@ -23,7 +20,6 @@ Now the php side should work
 
 
 ## Usefull commands
-<<<<<<< HEAD
 - `npm run dev` To compile sass & JS
 - `php artisan migrate:refresh` To refresh the database 
 - `php artisan db:seed` To fill the database with seeder, to do after the refresh or it will be many duplications
@@ -41,4 +37,5 @@ Now the php side should work
 - `git push -u origin`
 #### To get updates from another collaborator
 - `git pull upstream master`
+- `git pull origin master`
 

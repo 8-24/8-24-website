@@ -18,9 +18,32 @@ import LabsPost from './LabsPost';
 export default class Example extends Component {
     constructor(props){
       super(props);
-      this.state = {defaultPage: 0}
+      this.state = {
+        defaultPage: 0, 
+        transform: ''}
+    }
+    componentDidMount(){
+      //window.addEventListener('scroll', this.handleScroll);
+      window.addEventListener('scroll', this.handleScroll);
     }
 
+    handleScroll(ev){
+      var posY = this.scrollY;
+      var state = false;
+      if(posY > 100){
+        state = true;
+      }
+      if(posY < 100){
+        state = false;
+      }
+
+      if(state){
+        console.log("show bg nav");
+        document.getElementById('main-nav-wrap').classList.add('display-logo-bg');
+      }else{
+        document.getElementById('main-nav-wrap').classList.remove('display-logo-bg');
+      }
+    }
 
     navInteract()
     {
@@ -29,7 +52,7 @@ export default class Example extends Component {
         {
             nav.classList.remove('displayed-nav');
             nav.classList.add('hidden-nav');
-        }else{
+          }else{
             nav.classList.remove('hidden-nav');
             nav.classList.add('displayed-nav');
         }
@@ -48,7 +71,8 @@ export default class Example extends Component {
                 </Link>
                 <div className="container">
                   <div className="twelve columns">
-                      <nav className="navbar">
+                      <div id="main-nav-wrap" className=""></div>
+                      <nav className="navbar" id="">
                         <div className="row">
                           <div className="nav-logo-wrapper">
                               <Link to="/" id="nav-default-logo">
