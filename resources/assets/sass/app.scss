@@ -62,8 +62,6 @@ body{
   color: $violet;
 }
 
-
-
 .color-white{
   color: $white;
 }
@@ -89,6 +87,10 @@ body{
 
 .body-black-bg{
   background-color: $body-black-bg;
+  color: $white;
+}
+
+.body-black-bg a{
   color: $white;
 }
 
@@ -150,7 +152,6 @@ body{
   width:73%;
 }
 
-
 #nav-burger:hover{
   stroke: black!important;
   cursor: pointer;
@@ -187,7 +188,7 @@ body{
 
 .display-logo-bg{
   width: 100%;
-  height: 6%;
+  height: 8%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -319,6 +320,7 @@ body{
   .home-section-title-wrap{
     float: left;
   }
+
   .close-nav-btn{
     width: 3%;
     -webkit-transition: 100ms;
@@ -385,7 +387,6 @@ body{
     float: right;
     width: 3%;
     margin-top: 10px;
-
   }
 }
 

@@ -77,6 +77,10 @@ body {
   color: white !important;
 }
 
+.body-black-bg a {
+  color: white !important;
+}
+
 #nav-default-logo,
 #nav-lab-logo {
   width: -webkit-max-content;
@@ -175,7 +179,7 @@ body {
 
 .display-logo-bg {
   width: 100%;
-  height: 6%;
+  height: 8%;
   position: fixed;
   top: 0px;
   left: 0px;

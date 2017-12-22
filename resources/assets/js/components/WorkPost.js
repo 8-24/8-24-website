@@ -10,7 +10,7 @@ export default class WorkPost extends Component{
 
 
   componentDidMount(){
-    NavBarLogic("grey");
+    NavBarLogic("grey", "color");
 
     var path = this.props.location.pathname;
 

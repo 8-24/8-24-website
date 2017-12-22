@@ -9,7 +9,7 @@ export default class BlogPost extends Component{
 
 
   componentDidMount(){
-    NavBarLogic("grey");
+    NavBarLogic("grey", "color");
 
     var path = this.props.location.pathname;
 

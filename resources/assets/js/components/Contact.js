@@ -4,7 +4,7 @@ import {NavBarLogic} from '../logic/NavLogic';
 export default class Home extends Component{
 
   componentDidMount(){
-    NavBarLogic("grey");
+    NavBarLogic("grey", "color");
   }
 
   validateEmail(email) {

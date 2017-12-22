@@ -14,7 +14,7 @@ export default class Blog extends Component{
 
   }
   componentDidMount() {
-    NavBarLogic("grey");
+    NavBarLogic("grey", "color");
     if(this.props.display == "preview") {
       axios.get('http://127.0.0.1:8000/api/blog/limit/4')
         .then(response => {

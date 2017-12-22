@@ -2,10 +2,16 @@
 
 
 // modes : grey or black
-export function NavBarLogic(mode){
+// page : illustration , color
+export function NavBarLogic(mode, page){
+
     if(mode == "black"){
         var wrap = document.getElementById("app-agile-container");
-        wrap.className = "black-background";
+        if(page == 'illustration'){
+            wrap.className = "black-background";
+        }else{
+            wrap.className = "body-black-bg";
+        }
         document.getElementById('nav-default-logo').style.display = 'none';    // hide default 8-24 logo
         document.getElementById('nav-lab-logo').style.display = 'block';      // show default 8-24 logo
         document.getElementById('side-nav-home-logo').style.display = 'block'; // show side home btn
@@ -23,7 +29,11 @@ export function NavBarLogic(mode){
     } else
     {
         var wrap = document.getElementById("app-agile-container");
-        wrap.className = "white-background";
+        if(page == 'illustration'){
+            wrap.className = "white-background";
+        }else{
+            wrap.className = "grey-background";
+        }
         document.getElementById('nav-default-logo').style.display = 'block';     // hide default 8-24 logo
         document.getElementById('nav-lab-logo').style.display = 'none';       // hide default 8-24 logo
         document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
@@ -40,6 +50,15 @@ export function NavBarLogic(mode){
         document.getElementById('main-nav-wrap').classList.add('grey-nav');
     }
 
+
+}
+
+export function LogoLogic(page){
+    if(page == home){
+
+    }else{
+        
+    }
 
 }
 

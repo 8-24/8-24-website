@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Parser from 'html-react-parser';
 import P5Wrapper from 'react-p5-wrapper';
+import {NavBarLogic} from '../logic/NavLogic';
 export default class LabsPost extends Component{
   constructor(props){
     super(props);
@@ -12,6 +13,7 @@ export default class LabsPost extends Component{
     //var wrap = document.getElementById("app-agile-container");
     //wrap.className = "black-background";
     //document.body.className += ' ' + 'body-black-bg';
+    /*
     document.getElementById('app-agile-container').className = "body-black-bg";
     document.getElementById('nav-default-logo').style.display = 'none';    // hide default 8-24 logo
     document.getElementById('nav-lab-logo').style.display = 'block';      // hide default 8-24 logo
@@ -21,7 +23,8 @@ export default class LabsPost extends Component{
 
     document.getElementById('close-nav-btn-red').style.display = 'block';
     document.getElementById('close-nav-btn-yellow').style.display = 'none';
-
+*/
+    NavBarLogic("black", "color");
     var path = this.props.location.pathname;
     axios.get('http://127.0.0.1:8000/api'+path)
       .then(response => {

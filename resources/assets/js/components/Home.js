@@ -15,18 +15,16 @@ export default class Home extends Component{
         {content: "Original! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis."}
       ]
     };
-
-
     //this.changeText = this.changeText.bind(this);
   }
   componentDidMount(){
-    NavBarLogic("grey");
+    NavBarLogic("grey", "illustration");
     axios.get('http://127.0.0.1:8000/api/home')
       .then(response => {
         //console.log(response.data);
         this.setState({sections: response.data})
       });
-
+    NavBarLogic("grey", "illustration");
   }
 
   changeText(id){

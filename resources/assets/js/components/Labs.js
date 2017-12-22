@@ -30,7 +30,7 @@ export default class Labs extends Component{
     document.getElementById('close-nav-btn-red').style.display = 'none'; // hide red btn
     document.getElementById('close-nav-btn-yellow').style.display = 'block'; // show yellow btn
     */
-    NavBarLogic("black");
+    NavBarLogic("black", "illustration");
 
     axios.get('http://127.0.0.1:8000/api/labs/categories')
       .then(response => {

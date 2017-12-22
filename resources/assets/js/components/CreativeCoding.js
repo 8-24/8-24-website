@@ -6,7 +6,7 @@ import {
   Link,
 } from 'react-router-dom'
 import P5Wrapper from 'react-p5-wrapper';
-
+import {NavBarLogic} from '../logic/NavLogic';
 
 
 export default class CreativeCoding extends Component{
@@ -16,6 +16,7 @@ export default class CreativeCoding extends Component{
 
   }
   componentDidMount() {
+    /*
     document.getElementById('app-agile-container').className = "body-black-bg";
     document.getElementById('nav-default-logo').style.display = 'none';    // hide default 8-24 logo
     document.getElementById('nav-lab-logo').style.display = 'block';      // hide default 8-24 logo
@@ -25,6 +26,9 @@ export default class CreativeCoding extends Component{
 
     document.getElementById('close-nav-btn-red').style.display = 'none';
     document.getElementById('close-nav-btn-yellow').style.display = 'block';
+    */
+    
+    NavBarLogic("black", "color");
     var script;
     axios.get('http://127.0.0.1:8000/api/creative-coding')
       .then(response => {
