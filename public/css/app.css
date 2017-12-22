@@ -157,6 +157,8 @@ body {
   color: black;
   display: block;
   background-color: #eaeaea;
+  text-align: center;
+  left: -25%;
 }
 
 .displayed-black-nav {
@@ -168,6 +170,7 @@ body {
   color: white;
   display: block;
   background-color: #12000e;
+  left: -25%;
 }
 
 #display-nav li {
@@ -288,6 +291,14 @@ body {
   border-color: #ff0066 !important;
 }
 
+.arrow-back {
+  width: 10%;
+}
+
+.arrow-back:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 400px) {
   .nav-burger {
     float: right;
@@ -316,6 +327,14 @@ body {
 /* Larger than tablet */
 
 @media (max-width: 750px) {
+  #side-nav-home-logo {
+    display: none;
+  }
+
+  #side-nav-labs-logo {
+    display: none;
+  }
+
   .nav-logo {
     float: left;
     width: 30%;
@@ -336,11 +355,11 @@ body {
   }
 
   .close-nav-btn {
-    width: 2%;
+    width: 15%;
     -webkit-transition: 100ms;
     transition: 100ms;
     position: fixed;
-    right: 10%;
+    right: 5%;
     top: 5%;
   }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Parser from 'html-react-parser';
 import {NavBarLogic} from '../logic/NavLogic';
+
 export default class WorkPost extends Component{
   constructor(props){
     super(props);
@@ -36,9 +37,10 @@ export default class WorkPost extends Component{
             {Parser(String(this.state.gallery.content))}
           </div>
         <hr/>
-        <h1 onClick={this.goTo.bind(this)}>Retour <span className="red-color">/</span></h1>
+        <div onClick={this.goTo.bind(this)}>
+        <img className="arrow-back" src="/img/arrow_back_black.svg" />
+        </div>
       </div>
-
     )
   }
 }

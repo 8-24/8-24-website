@@ -41,6 +41,19 @@ export default class Blog extends Component{
     }
   }
 
+  ButtonGoBack(){
+    if(this.props.display != "preview"){
+      return <h1 onClick={this.goTo.bind(this)}>
+      <img className="arrow-back" src="/img/arrow_back_black.svg" />
+    </h1>
+    }
+  }
+  goTo(){
+    this.props.history.push('/');
+  }
+
+
+
 
 
 
@@ -82,7 +95,7 @@ export default class Blog extends Component{
           {this.PostsList(this.state.posts)}
         </div>
         {this.ButtonDisplayMore()}
-
+        {this.ButtonGoBack()}
       </div>
 
     )

@@ -36,7 +36,9 @@ export default class BlogPost extends Component{
           {Parser(String(this.state.post.content))}
         </div>
         <hr/>
-        <h1 onClick={this.goTo.bind(this)}>Retour <span className="red-color">/</span></h1>
+        <h1 onClick={this.goTo.bind(this)}>
+          <img className="arrow-back" src="/img/arrow_back_black.svg" />
+        </h1>
       </div>
 
     )
