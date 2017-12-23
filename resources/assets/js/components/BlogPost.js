@@ -15,7 +15,7 @@ export default class BlogPost extends Component{
 
     axios.get('http://127.0.0.1:8000/api'+path)
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         this.setState({post: response.data})
       });
 

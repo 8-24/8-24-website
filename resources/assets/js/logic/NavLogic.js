@@ -1,5 +1,3 @@
-
-
 /*
 * @param {String}  mode - one of these two modes grey or black
 * @param {String}  page - one of these two pages illustration or color

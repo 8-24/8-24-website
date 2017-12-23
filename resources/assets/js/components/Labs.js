@@ -26,7 +26,7 @@ export default class Labs extends Component{
 
   changeText(id){
     var idCatched = id.target.id;
-    console.log(idCatched);
+    //console.log(idCatched);
     this.setState(
       {selectedSection: (Number(idCatched) - 1)} // cast to int
     );

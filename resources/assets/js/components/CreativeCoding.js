@@ -9,6 +9,7 @@ import P5Wrapper from 'react-p5-wrapper';
 import {NavBarLogic} from '../logic/NavLogic';
 
 
+
 export default class CreativeCoding extends Component{
   constructor(props){
     super(props);
@@ -20,9 +21,9 @@ export default class CreativeCoding extends Component{
     var script;
     axios.get('http://127.0.0.1:8000/api/creative-coding')
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         this.setState({posts: response.data})
-        //eval(response.data);
+        //eval(response.data.script);
         //response.data;
       });
   }
@@ -30,11 +31,12 @@ export default class CreativeCoding extends Component{
   PostsList(list){
     var posts = list.map((item) => {
         return <div className="three columns margin-top-fifty" key={item.id}>
-          <div className="work-link" >
-            <Link to={`/labs/creative-coding/${item.slug}`} ><h2 id={item.slug} >{item.title}</h2></Link>
+          <div className="lab-project-wrap work-link" >
+            <Link className="lab-project-link" to={`/labs/creative-coding/${item.slug}`} ><h2 id={item.slug} >{item.title}</h2></Link>
             <Link to={`/labs/creative-coding/${item.slug}`} >
               <ProgressiveImage
                 id={item.slug}
+                className="lab-project-cover"
                 src={item.cover}
                 placeholder={item.cover}
                 style={{
