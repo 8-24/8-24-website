@@ -217,6 +217,7 @@ body {
 .displayed-nav a {
   color: black;
   font-size: 64px;
+  text-decoration: none;
 }
 
 .hidden-nav {
@@ -297,6 +298,7 @@ body {
 
 .work-link a {
   color: black;
+  text-decoration: none;
 }
 
 .work-link a:hover {

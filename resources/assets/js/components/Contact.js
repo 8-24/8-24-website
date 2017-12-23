@@ -29,7 +29,6 @@ export default class Home extends Component{
 
         // mail valid
         axios.post('http://127.0.0.1:8000/api/add-contact-message', data)
-
           .then((response) => {
             document.getElementById('contact-success-message').className = '';
             document.getElementById('message-mail').className = 'invisible-bg u-full-width';
@@ -37,17 +36,12 @@ export default class Home extends Component{
           .catch((error) => {
             alert("Une erreur s'est produite du côté de nos serveurs, veuillez rafraîchir la page et réessayer.");
           });
-
-
       }else{
         // mail not valid
         //alert('mail pas valide');
         document.getElementById('message-mail').className += ' input-warning';
       }
-
-
     }
-    //alert('handle form');
   }
 
   render(){
@@ -70,7 +64,6 @@ export default class Home extends Component{
               <button onClick={this.handleForm.bind(this)}>Envoyer</button>
             </form>
           </div>
-
         </div>
       </div>
      </div>

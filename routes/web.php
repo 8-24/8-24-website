@@ -70,3 +70,7 @@ Route::post('deleteLabsCategory', ['as' => 'deleteLabsCategory', 'uses' => 'Labs
 Route::get('/admin/labs/categories/edit/{id}', 'LabsCategoriesController@adminShow');
 Route::get('admin/labs/posts', 'LabsPostController@adminIndex');
 Route::post('addLabPost', ['as' => 'addLabPost', 'uses' => 'LabsPostController@store']);
+
+/* Contact message */
+Route::get('/admin/contact', 'ContactController@adminIndex');
+Route::post('deleteContactMessage', ['as' => 'deleteContactMessage', 'uses' => 'ContactController@destroy']);

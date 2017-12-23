@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
+    /**
+    * Display a listing of the resource for the admin side
+    * @return \Illuminate\Http\Response
+    */
+    public function adminIndex(){
+
+        $data = ContactMessage::all();
+        return view('admin.contact.index', ['data' => $data]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -87,8 +98,12 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request['id'];
+        $item = ContactMessage::where('id', $id)->first();
+        $item->delete();
+        return redirect()->back();
+        
     }
 }

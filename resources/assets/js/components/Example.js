@@ -28,17 +28,21 @@ export default class Example extends Component {
       window.addEventListener('scroll', this.handleScroll);
     }
 
-    handleScroll(ev){
+    handleScroll(ev)
+    {
       var posY = this.scrollY;
       var state = false;
-      if(posY > 100){
+      if(posY > 100)
+      {
         state = true;
       }
-      if(posY < 100){
+      if(posY < 100)
+      {
         state = false;
       }
 
-      if(state){
+      if(state)
+      {
         console.log("show bg nav");
         document.getElementById('main-nav-wrap').classList.add('display-logo-bg');
       }else{
@@ -111,7 +115,7 @@ export default class Example extends Component {
                         <Route exact path="/labs/creative-coding" component={CreativeCoding} />
                         <Route path="/labs/:category/:slug" component={LabsPost} />
                         <Route exact path="/contact" component={Contact}/>
-                        <Route component={Error404} /> 
+                        <Route path="/error/404" component={Error404} /> 
                       </div>
                   </div>
                 </div>
