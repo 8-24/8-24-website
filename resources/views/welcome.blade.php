@@ -26,7 +26,10 @@
                 <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />
                 <meta property="article:section" content="{{ $data->description }}" />
                 <meta property="fb:admins" content="Facebook numberic ID" />
+            @else
+                <meta property="og:image" content="{{ asset($seo_cover) }}" />
             @endif
+
         @endsection
 
         @section('content')

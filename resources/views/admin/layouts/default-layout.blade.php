@@ -79,7 +79,7 @@
                         <a class="nav-link" href="/admin/contact"><i class="icon-puzzle"></i>Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/home"><i class="icon-puzzle"></i>SEO</a>
+                        <a class="nav-link" href="/admin/seo-default-pages"><i class="icon-puzzle"></i>SEO</a>
                     </li>
                 </ul>
             </nav>
