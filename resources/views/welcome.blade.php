@@ -30,19 +30,7 @@
         @endsection
 
         @section('content')
-        <!--
-        <div class="flex-center position-ref full-height">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="twelve columns">
-        -->
-                        <div id="example"></div>
-        <!--
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
+            <div id="example"></div>
         @endsection
 
 

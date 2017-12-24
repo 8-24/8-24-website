@@ -3,21 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- SEO -->
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="John Doe">
-    <!-- Networks -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="img/fav.png" width="27px" height="10px"/>
     <title>Admin 8-24 agence</title>
-
-    <!-- Styles -->
     <link href="{{ asset('css/skel.css') }}" rel="stylesheet">
-    <!--<link href="{{ asset('css/console.css') }}" rel="stylesheet">-->
     <link href="{{ asset('css/dahsboard-style.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -28,42 +21,6 @@
     <a class="navbar-brand" href="/admin/">
         <img src="{{ asset('/img/logo.svg') }}" alt="" style="width: 60%; height: auto;margin: 5%;">
     </a>
-    <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link" href="#"><i class="icon-list"></i></a>
-        </li>
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="img/avatars/6.jpg" class="img-avatar" alt="">
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header text-center">
-                    <strong>Account</strong>
-                </div>
-                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
-                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
-                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">42</span></a>
-                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="badge badge-warning">42</span></a>
-                <div class="dropdown-header text-center">
-                    <strong>Settings</strong>
-                </div>
-                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
-                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
-                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="badge badge-secondary">42</span></a>
-                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="badge badge-primary">42</span></a>
-                <div class="divider"></div>
-                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
-                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
-            </div>
-        </li>
-    </ul>
-    <button class="navbar-toggler aside-menu-toggler" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
 </header>
     <div class="app-body">
         <div class="sidebar">
@@ -99,8 +56,6 @@
                 </ul>
             </nav>
         </div>
-
-
         <!-- Main content -->
         <main class="main">
             <div class="container-fluid">
@@ -108,16 +63,10 @@
                     <div class="row">
                         @yield('content')
                     </div>
-                    <!--/.row-->
                 </div>
-
             </div>
-            <!-- /.conainer-fluid -->
         </main>
-
-
-<!--</div>-->
-</div>
+    </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -125,8 +74,6 @@
 <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
 <script>
     $('#lfm').filemanager('image');
-
-
     var editor_config = {
         path_absolute : "/",
         selector: "textarea.my-editor",
@@ -148,7 +95,6 @@
             } else {
                 cmsURL = cmsURL + "&type=Files";
             }
-
             tinyMCE.activeEditor.windowManager.open({
                 file : cmsURL,
                 title : 'Filemanager',
@@ -162,8 +108,5 @@
 
     tinymce.init(editor_config);
 </script>
-
-
-
 </body>
 </html>
