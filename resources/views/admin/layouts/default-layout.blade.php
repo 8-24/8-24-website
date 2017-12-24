@@ -3,21 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- SEO -->
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="John Doe">
-    <!-- Networks -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="img/fav.png" width="27px" height="10px"/>
     <title>Admin 8-24 agence</title>
-
-    <!-- Styles -->
     <link href="{{ asset('css/skel.css') }}" rel="stylesheet">
-    <!--<link href="{{ asset('css/console.css') }}" rel="stylesheet">-->
     <link href="{{ asset('css/dahsboard-style.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -28,23 +21,6 @@
     <a class="navbar-brand" href="/admin/">
         <img src="{{ asset('/img/logo.svg') }}" alt="" style="width: 60%; height: auto;margin: 5%;">
     </a>
-    <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link" href="#"><i class="icon-list"></i></a>
-        </li>
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="img/avatars/6.jpg" class="img-avatar" alt="">
-            </a>
-        </li>
-    </ul>
-    <button class="navbar-toggler aside-menu-toggler" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
 </header>
     <div class="app-body">
         <div class="sidebar">
@@ -71,21 +47,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/labs/posts"><i class="icon-puzzle"></i>Labs posts</a>
                     </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/processing-frame"><i class="icon-puzzle"></i>Labs Processing</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/contact"><i class="icon-puzzle"></i>Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/seo-default-pages"><i class="icon-puzzle"></i>SEO</a>
+                        <a class="nav-link" href="/admin/home"><i class="icon-puzzle"></i>SEO</a>
                     </li>
                 </ul>
             </nav>
         </div>
-
-
         <!-- Main content -->
         <main class="main">
             <div class="container-fluid">
@@ -93,14 +63,9 @@
                     <div class="row">
                         @yield('content')
                     </div>
-                    <!--/.row-->
                 </div>
-
             </div>
-            <!-- /.conainer-fluid -->
         </main>
-
-
 <!--</div>-->
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -110,8 +75,6 @@
 <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
 <script>
     $('#lfm').filemanager('image');
-
-
     var editor_config = {
         path_absolute : "/",
         selector: "textarea.my-editor",
@@ -133,7 +96,6 @@
             } else {
                 cmsURL = cmsURL + "&type=Files";
             }
-
             tinyMCE.activeEditor.windowManager.open({
                 file : cmsURL,
                 title : 'Filemanager',
@@ -147,8 +109,6 @@
 
     tinymce.init(editor_config);
 </script>
-
-
 
 </body>
 </html>
