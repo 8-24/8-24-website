@@ -47,7 +47,7 @@
                             <tr>
                                 <th>Titre</th>
                                 <th>Slug</th>
-                                <th>Lien Iframe à inclure dans le code du post</th>
+                                <th>Lien Iframe à inclure dans le <strong>code</strong> du post</th>
                                 <th>Supprimer</th>
                             </tr>
                             </thead>
