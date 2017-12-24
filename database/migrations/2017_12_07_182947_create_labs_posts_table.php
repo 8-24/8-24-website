@@ -23,8 +23,6 @@ class CreateLabsPostsTable extends Migration
             $table->text('description');
             $table->string('author');
             $table->longText('content');
-            $table->boolean('script_state')->nullable();
-            $table->longText('script_content')->nullable();
             $table->timestamps();
         });
     }

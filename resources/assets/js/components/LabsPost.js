@@ -31,11 +31,11 @@ export default class LabsPost extends Component{
 
   
   render(){
+    //<P5Wrapper sketch={Sketch} />-->
     return(
       <div className="margin-top-hundred color-white">
         <h1 className="color-white">{this.state.post.title}</h1>
         <div id="gallery-content">
-          <P5Wrapper sketch={Sketch} />
           <br/>
           {Parser(String(this.state.post.content))}
         </div>

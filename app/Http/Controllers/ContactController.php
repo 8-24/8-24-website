@@ -9,6 +9,15 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
 
+    public function servIndex(){
+
+        $item = SeoPage::where('slug', 'contact')->first();
+        return view('welcome', ['seo_description' => $item->description, 
+                                'seo_author' => $item->author, 
+                                'seo_keywords' => $item->keywords, 
+                                'seo_cover' => $item->cover]);
+    }
+
     /**
     * Display a listing of the resource for the admin side
     * @return \Illuminate\Http\Response

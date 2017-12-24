@@ -105,7 +105,7 @@ export default class Example extends Component {
                           </ul>
                         </div>
                       </nav>
-                      <div className="page-content">
+                      <div className="page-content" id="page-content">
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/works" component={Works}/>
                         <Route path="/works/:slug" component={WorkPost} />
