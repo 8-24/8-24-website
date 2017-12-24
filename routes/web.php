@@ -29,6 +29,7 @@ Route::get('/blog/{slug}', 'BlogPostController@servPostIndex');
 Route::get('/works', 'WorksController@ServIndex');
 Route::get('/works/{slug}', 'WorksController@ServItemIndex');
 Route::get('/labs', 'LabsCategoriesController@servIndex');
+Route::get('/iframe/{slug}', 'ProcessingFrameController@show');
 //Route::get('/labs', )
 
 Route::group(['prefix' => '/admin',  'middleware' => 'auth'], function()
@@ -70,6 +71,14 @@ Route::group(['prefix' => '/admin',  'middleware' => 'auth'], function()
         /* Contact message */
         Route::get('/contact', 'ContactController@adminIndex');
         Route::post('deleteContactMessage', ['as' => 'deleteContactMessage', 'uses' => 'ContactController@destroy']);
+
+        /* ProcessingFrame */
+        Route::get('/processing-frame', 'ProcessingFrameController@adminIndex');
+        Route::get('/processing-frame/edit/{id}', 'ProcessingFrameController@adminShow');
+        Route::post('addProcessingPost', ['as' => 'addProcessingPost', 'uses' => 'ProcessingFrameController@store']);
+        Route::post('updateProcessingPost', ['as' => 'updateProcessingPost', 'uses' => 'ProcessingFrameController@update']);
+        Route::post('deleteProcessingPost', ['as' => 'deleteProcessingPost', 'uses' => 'ProcessingFrameController@destroy']);
+
 });
 
 

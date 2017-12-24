@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLabsPostsTable extends Migration
+class CreateProcessingFramesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,11 @@ class CreateLabsPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('labs_posts', function (Blueprint $table) {
+        Schema::create('processing_frames', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
-            $table->integer('category_id');
-            $table->string('cover');
-            $table->text('keywords');
-            $table->text('description');
-            $table->string('author');
-            $table->longText('content');
+            $table->longtext('script');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ class CreateLabsPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('labs_posts');
+        Schema::dropIfExists('processing_frames');
     }
 }
