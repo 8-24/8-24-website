@@ -9,21 +9,22 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-
     /**
      * Display a home page by serve rendering
      * @return \Illuminate\Http\Response
      */
-
     public function servIndex(){
-
         $item = SeoPage::where('slug', '/')->first();
         return view('welcome', ['seo_description' => $item->description, 
                                 'seo_author' => $item->author, 
                                 'seo_keywords' => $item->keywords, 
                                 'seo_cover' => $item->cover]);
     }
-
+    /**
+     * Display a listing of the resource to admin side.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function adminIndex(){
 
         $data = Home::all();
@@ -38,9 +39,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
-
     public function index()
     {
         $data = Home::all();

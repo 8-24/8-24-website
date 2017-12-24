@@ -47,6 +47,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/labs/posts"><i class="icon-puzzle"></i>Labs posts</a>
                     </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/processing-frame"><i class="icon-puzzle"></i>Processing iframe</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/contact"><i class="icon-puzzle"></i>Contact</a>
                     </li>
