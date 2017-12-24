@@ -5,25 +5,32 @@ export default function sketch (p) {
     colorsMondrian[2] = "#B61E03";
     colorsMondrian[3] = "#4678A5";
     var gapVal = 0.5;
-
-    var song, amplitude;
   
     p.setup = function () {
-        var widthCnv = (document.getElementById("main-nav-wrap").offsetWidth / 10) * 8
-      p.createCanvas(widthCnv , (window.innerHeight / 2), p.WEBGL);
+      var widthCnv = (document.getElementById("page-content").offsetWidth / 10) * 10;
+      var cnv = p.createCanvas(widthCnv , (window.innerHeight / 2), p.WEBGL);
       p.background(0);
     };
 
-    var r = 20;
+    var r = 1;
     p.draw = function () {
+        //console.log(r);
         p.stroke(0);
         //getCells();
       
-        if(r%20 == 0) {
-          getCells();
-        }
+        //if(r%20 == 0) {
+          if(r == 1)
+          {
+              getCells();
+          }
+        //}
         r += 1;
     };
+
+    p.keyPressed = function(){
+            r = 0;
+            save(cnv, "mondrian_frame.jpg");
+    }
 
 
 
@@ -55,13 +62,10 @@ export default function sketch (p) {
         {
         if(Math.random() < 0.23)
         {
-            //stroke(133);
             var randomNb = Math.floor( Math.random() * (3) + 1);
             p.fill(colorsMondrian[randomNb]);
             p.noStroke();
-            //rotate(r);
             p.rect(divXCoord[i], divYCoord[j], divXCoord[i+1] - divXCoord[i], divYCoord[j+1] - divYCoord[j]);
-            //rotate(-r);
         }
         }
     }
@@ -80,7 +84,6 @@ export default function sketch (p) {
         if(i != 0)
         {
             p.rect(divXCoord[i] - p.width * divWidth * 4, divYCoord[j] - p.height * divWidth/2, p.width * divWidth, p.width * divWidth);
-
             if(j < heightSec)
             {
             p.rect(divXCoord[i] - divWidth * p.width * 4, divYCoord[j], p.width * divWidth, p.width - divYCoord[j]);
