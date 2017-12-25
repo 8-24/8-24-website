@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SeoPagesSeeder::class);
         $this->call(LabsPostSeeder::class);
         $this->call(LabCategorySeeder::class);
+        $this->call(ProcessingFramesSeeder::class);
     }
 }
