@@ -16,11 +16,9 @@ export default class LabsPost extends Component{
   componentDidMount(){
     NavBarLogic("black", "color");
     var path = this.props.location.pathname;
-    axios.get('http://127.0.0.1:8000/api'+path)
+    axios.get('http://127.0.0.1:8000/api/labs/posts/'+this.props.match.params.slug)
       .then(response => {
-        //console.log(response.data);
         this.setState({post: response.data});
-        eval(response.data.script_content);
       });
   }
 
@@ -37,10 +35,11 @@ export default class LabsPost extends Component{
         <h1 className="color-white">{this.state.post.title}</h1>
         <div id="gallery-content">
           <br/>
+          <h1>Hello LabsPost</h1>
           {Parser(String(this.state.post.content))}
         </div>
         <hr/>
-        <Link to="/labs/creative-coding">
+        <Link to={`/labs/${this.props.match.params.category}`}>
           <img src="/img/arrow_back_white.svg"  className="arrow-back" />
         </Link>
       </div>

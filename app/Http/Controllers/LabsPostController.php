@@ -86,12 +86,23 @@ class LabsPostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($category, $slug)
+    public function show($slug)
     {
         //
         //return $slug;
         $data = LabsPost::where('slug', $slug)->first();
         return response()->json($data, 200);
+    }
+
+    /**
+     * Display all posts from this category
+     * @return \Illuminate\Http\Response
+     */
+    public function showCat($slug){
+        $category = LabsCategory::where('slug', $slug)->first();
+        $data = LabsPost::where('category_id', $category->id)->get();
+        return response()->json($data, 200);
+    
     }
 
     /**

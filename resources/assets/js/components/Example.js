@@ -12,7 +12,8 @@ import Contact from './Contact';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
 import Labs from './Labs';
-import CreativeCoding from './CreativeCoding';
+//import CreativeCoding from './CreativeCoding';
+import LabsCategory from './labsCategory';
 import LabsPost from './LabsPost';
 import Error404 from './error/404';
 
@@ -112,8 +113,8 @@ export default class Example extends Component {
                         <Route exact path="/blog" component={Blog} />
                         <Route path="/blog/:slug" component={BlogPost} />
                         <Route exact path="/labs" component={Labs} />
-                        <Route exact path="/labs/creative-coding" component={CreativeCoding} />
-                        <Route path="/labs/:category/:slug" component={LabsPost} />
+                        <Route exact path="/labs/:category" component={LabsCategory} />
+                        <Route exact path="/labs/:category/:slug" component={LabsPost} />
                         <Route exact path="/contact" component={Contact}/>
                         <Route path="/error/404" component={Error404} /> 
                       </div>
@@ -122,8 +123,9 @@ export default class Example extends Component {
               </div>
           </Router>
               );
-    }
-}
+            }
+          }
 if (document.getElementById('example')) {
+//    <Route exact path="/labs/creative-coding" component={CreativeCoding} />
     ReactDOM.render(<Example />, document.getElementById('example'));
 }
