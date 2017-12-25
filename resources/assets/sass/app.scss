@@ -1,9 +1,7 @@
 
 // Fonts
-//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 // Variables
 @import "variables";
-
 // Bootstrap
 //@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @font-face {
@@ -22,6 +20,7 @@
   font-family: "SansProItalic";
   src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf');
 }
+
 h2{
   font-family: "SansProReg", Helvetica, Arial, sans-serif;
 }
@@ -41,7 +40,6 @@ body{
   color: $red;
   font-size: 54px;
   font-family: SansProBold, Helvetica, Arial, sans-serif;
-
 }
 .yellow-color{
   color: $yellow;
@@ -70,13 +68,15 @@ body{
   background-size: cover;
   background-attachment: fixed;
 }
+
 .body-black-bg{
   background-color: $body-black-bg;
   color: $white;
+  a {
+    color: $white;
+  }
 }
-.body-black-bg a{
-  color: $white;
-}
+
 #nav-default-logo, #nav-lab-logo{
   width: max-content;
   float: left;
@@ -158,13 +158,13 @@ body{
 .black-nav{
   color: white!important;
   background-color: $body-black-bg;
-}
-.black-nav a {
-  color: $white;
-}
 
-.black-nav a:hover{
-  color: $yellow;
+  a {
+    color: $white;
+    &:hover{
+      color: $yellow!important;
+    }
+  }
 }
 
 .display-logo-bg{
@@ -177,12 +177,15 @@ body{
   transition: height 1s;
 }
 
-#display-nav li{
-  list-style-type: none;
-}
-#display-nav a:hover{
+#display-nav {
+  li{
+    list-style-type: none;
+  }
+  a:hover{
+  cursor: pointer;
   transition: 100ms;
-  color: $red!important;
+  color: $red;
+  }
 }
 #display-nav-bg{
   width: 100%;
@@ -215,8 +218,16 @@ body{
   transition: 100ms;
   font-size: 54px;
   font-family: SansProBold, Helvetica, Arial, sans-serif;
+  &:hover{
+    transition: 100ms;
+    color: $red!important;
+    cursor: pointer;
+  }
 }
-
+.home-section-link-active{
+  transition: 100ms;
+  color: $red!important;
+}
 
 .labs-section-link{
   transition: 100ms;
@@ -225,24 +236,11 @@ body{
   color: white;
 
 }
-
-
 .labs-section-link-active{
-
   color: $yellow!important;
 }
 
-.home-section-link:hover{
-  transition: 100ms;
-  color: $red!important;
-  cursor: pointer;
-}
 
-.home-section-link-active{
-  transition: 100ms;
-  color: $red!important;
-
-}
 
 .page-content{
   margin-top:80px;
@@ -273,10 +271,11 @@ body{
 .work-link a {
   color: $black;
   text-decoration: none;
+  &:hover{
+    cursor: url('/img/cursor_violet.png'), auto!important;
+  }
 }
-.work-link a:hover{
-  cursor: url('/img/cursor_violet.png'), auto!important;
-}
+
 
 .invisible-bg{
   background: transparent!important;
@@ -314,12 +313,10 @@ body{
     position: fixed;
     right: 10%;
     top: 5%;
+    &:hover{
+      cursor: pointer;
+    }
   }
-
-  .close-nav-btn:hover{
-    cursor: pointer;
-  }
-
 }
 
 /* Larger than tablet */
@@ -330,26 +327,22 @@ body{
   #side-nav-labs-logo{
     display: none;
   }
-
   .nav-logo{
     float: left;
     width: 30%;
   }
-
-
   .nav-burger{
     float: right;
     margin-top: -30px;
     width: 13%;
+    &:hover{
+      cursor: pointer;
+    }
+  }
 
-  }
-  .nav-burger:hover{
-    cursor: pointer;
-  }
   .home-section-title-wrap{
     float: left;
   }
-
   .close-nav-btn{
     width: 15%;
     -webkit-transition: 100ms;
@@ -357,14 +350,11 @@ body{
     position: fixed;
     right: 5%;
     top: 5%;
+    &:hover{
+      cursor: pointer;
+      transition: 100ms;
+    }
   }
-  
-  .close-nav-btn:hover{
-    cursor: pointer;
-    transition: 100ms;
-  }
-
-
 }
 
 /* Larger than Desktop HD */
