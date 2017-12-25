@@ -14,12 +14,13 @@ Route::get('/works/{slug}', ['uses' => 'WorksController@show']);
 
 Route::get('/works/limit/{limit?}', ['uses' => 'WorksController@index']);
 
-Route::get('/labs/categories', ['uses' => 'LabsCategoriesController@index']); // ok
-Route::get('/labs/categories/{slug}', ['uses' => 'LabsCategoriesController@show']);
-Route::get('/labs/{category}/posts', ['uses' => 'LabsPostController@showCat']);
-Route::get('/labs/posts/{slug}', ['uses' => 'LabsPostController@show']);
-//Route::get('/labs/posts/{slug}', ['uses' => 'LabsPostController@index']);
+Route::get('/labs/categories', ['uses' => 'LabsCategoriesController@index']);
 
+Route::get('/labs/categories/{slug}', ['uses' => 'LabsCategoriesController@show']);
+
+Route::get('/labs/{category}/posts', ['uses' => 'LabsPostController@showCat']);
+
+Route::get('/labs/posts/{slug}', ['uses' => 'LabsPostController@show']);
 
 Route::post('/add-contact-message', ['uses' => 'ContactController@store']);
 

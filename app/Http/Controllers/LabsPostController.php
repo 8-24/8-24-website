@@ -18,6 +18,20 @@ class LabsPostController extends Controller
 
     }
 
+    /**
+     * Display the resource to the server rendering.
+     */
+
+    public function servShow($category, $slug)
+    {
+        $currenLink = $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $data = LabsPost::where('slug', $slug)->first();
+        return view('welcome', ['data' => $data,
+            'seo_keywords' => $data->keywords,
+            'seo_description' => $data->description,
+            'current_link' => $currenLink
+        ]);
+    }
 
     /**
      * Display a listing of the resource.

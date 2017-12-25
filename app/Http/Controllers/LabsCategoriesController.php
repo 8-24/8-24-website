@@ -21,7 +21,7 @@ class LabsCategoriesController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource to the server rendering.
      *
      * @return \Illuminate\Http\Response
      */
@@ -34,6 +34,22 @@ class LabsCategoriesController extends Controller
             'seo_keywords' => $seo->keywords,
             'seo_description' => $seo->description]);
 
+    }
+
+    /**
+     * Display the resource to the server rendering.
+     *
+     */
+
+    public function servShow($category)
+    {
+        $currenLink = $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $data = LabsCategory::where('slug', $category)->first();
+        return view('welcome', ['data' => $data,
+            'seo_keywords' => $data->keywords,
+            'seo_description' => $data->description,
+            'current_link' => $currenLink
+        ]);
     }
 
     public function index()

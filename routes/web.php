@@ -23,9 +23,10 @@ Route::get('/blog', 'BlogPostController@servIndex');
 Route::get('/blog/{slug}', 'BlogPostController@servPostIndex');
 Route::get('/works', 'WorksController@ServIndex');
 Route::get('/works/{slug}', 'WorksController@ServItemIndex');
+Route::get('/labs/{category}', 'LabsCategoriesController@servShow');
+Route::get('/labs/{category}/{slug}', 'LabsPostController@servShow');
 Route::get('/labs', 'LabsCategoriesController@servIndex');
 Route::get('/iframe/{slug}', 'ProcessingFrameController@show');
-//Route::get('/labs', )
 
 Route::group(['prefix' => '/admin',  'middleware' => 'auth'], function()
 {

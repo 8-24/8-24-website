@@ -55,7 +55,7 @@ class BlogPostController extends Controller
         $data = BlogPost::where('slug', $slug)->first();
         $seo = BlogPost::where('slug', $slug)->first();
         return view('welcome', ['data' => $data, 
-                                'seo_keywords' => $seo->description, 
+                                'seo_keywords' => $seo->keywords,
                                 'seo_description' => $seo->description, 
                                 'seo_author' => $seo->author, 
                                 'seo_cover' => $seo->cover]);
