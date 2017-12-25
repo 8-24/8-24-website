@@ -10,7 +10,7 @@ export default class BlogPost extends Component{
 
   componentDidMount(){
     NavBarLogic("grey", "color");
-
+    window.scrollTo(0, 0);
     var path = this.props.location.pathname;
 
     axios.get('http://127.0.0.1:8000/api'+path)

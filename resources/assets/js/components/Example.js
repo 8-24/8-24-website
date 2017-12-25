@@ -5,6 +5,8 @@ import {
   Route,
   Link,
 } from 'react-router-dom'
+//import TransitionGroup from "react-transition-group/TransitionGroup";
+import { AnimatedSwitch } from 'react-router-transition';
 import Home from './Home';
 import Works from './Works';
 import WorkPost from './WorkPost';
@@ -12,7 +14,6 @@ import Contact from './Contact';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
 import Labs from './Labs';
-//import CreativeCoding from './CreativeCoding';
 import LabsCategory from './labsCategory';
 import LabsPost from './LabsPost';
 import Error404 from './error/404';
@@ -107,6 +108,12 @@ export default class Example extends Component {
                         </div>
                       </nav>
                       <div className="page-content" id="page-content">
+                      <AnimatedSwitch
+                        atEnter={{ opacity: 0 }}
+                        atLeave={{ opacity: 0 }}
+                        atActive={{ opacity: 1 }}
+                        className="switch-wrapper"
+                      >
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/works" component={Works}/>
                         <Route path="/works/:slug" component={WorkPost} />
@@ -117,6 +124,7 @@ export default class Example extends Component {
                         <Route exact path="/labs/:category/:slug" component={LabsPost} />
                         <Route exact path="/contact" component={Contact}/>
                         <Route path="/error/404" component={Error404} /> 
+                      </AnimatedSwitch>  
                       </div>
                   </div>
                 </div>

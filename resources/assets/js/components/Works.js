@@ -18,7 +18,7 @@ export default class Works extends Component {
 
   componentDidMount() {
     NavBarLogic("grey", "color");
-
+    window.scrollTo(0, 0);
     if(this.props.display == "preview"){
       axios.get('http://127.0.0.1:8000/api/works/limit/4')
         .then(response => {

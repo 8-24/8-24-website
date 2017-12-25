@@ -5,6 +5,7 @@ export default class Home extends Component{
 
   componentDidMount(){
     NavBarLogic("grey", "color");
+    window.scrollTo(0, 0);
   }
 
   validateEmail(email) {

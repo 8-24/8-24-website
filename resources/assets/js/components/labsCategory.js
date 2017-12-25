@@ -15,6 +15,7 @@ export default class LabsCategory extends Component{
   }
   componentDidMount(){
     NavBarLogic("black", "color");
+    window.scrollTo(0, 0);
     var slugCat = this.props.match.params.category;
     axios.get('http://127.0.0.1:8000/api/labs/categories/'+slugCat)
       .then(response => {

@@ -19,6 +19,7 @@ export default class Home extends Component{
   }
   componentDidMount(){
     NavBarLogic("grey", "illustration");
+    window.scrollTo(0, 0);
     axios.get('http://127.0.0.1:8000/api/home')
       .then(response => {
         //console.log(response.data);

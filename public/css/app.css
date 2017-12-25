@@ -81,12 +81,6 @@ body {
   color: white !important;
 }
 
-/*
-.body-black-bg a{
-  
-}
-*/
-
 #nav-default-logo,
 #nav-lab-logo {
   width: -webkit-max-content;
@@ -184,7 +178,7 @@ body {
 }
 
 .black-nav a:hover {
-  color: #e5e642 !important;
+  color: #e5e642;
 }
 
 .display-logo-bg {
@@ -202,10 +196,9 @@ body {
 }
 
 #display-nav a:hover {
-  cursor: pointer;
   -webkit-transition: 100ms;
   transition: 100ms;
-  color: #ff0067;
+  color: #ff0067 !important;
 }
 
 #display-nav-bg {

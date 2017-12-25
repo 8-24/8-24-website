@@ -17,6 +17,7 @@ export default class Labs extends Component{
     }
   }
   componentDidMount(){
+    window.scrollTo(0, 0);
     NavBarLogic("black", "illustration");
     axios.get('http://127.0.0.1:8000/api/labs/categories')
       .then(response => {
