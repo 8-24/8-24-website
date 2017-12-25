@@ -34,6 +34,10 @@ h2 {
   height: auto;
 }
 
+.lab-project-link h3 {
+  color: white;
+}
+
 .hidden {
   display: none;
 }
