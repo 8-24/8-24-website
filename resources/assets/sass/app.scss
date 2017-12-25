@@ -1,33 +1,11 @@
-
-// Fonts
-//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-// Variables
 @import "variables";
-// Bootstrap
-//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@font-face {
-  font-family: "SansProReg";
-  src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
-}
-@font-face {
-  font-family: "SansProBold";
-  src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
-}
-@font-face {
-  font-family: "SansProLight";
-  src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Light.ttf');
-}
-@font-face {
-  font-family: "SansProItalic";
-  src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf');
-}
 body{
-  font-family: "SansProReg", Helvetica, Arial, sans-serif;
+  font-family: $font-reg, Helvetica, Arial, sans-serif;
   margin:0px;
   cursor: url('../../../public/img/cursor_violet.png'),pointer;
 }
 h2{
-  font-family: "SansProReg", Helvetica, Arial, sans-serif;
+  font-family: $font-reg, Helvetica, Arial, sans-serif;
 }
 .block-preview{
   float: left;
@@ -40,13 +18,12 @@ h2{
 .red-color{
   color: $red;
   font-size: 54px;
-  font-family: SansProBold, Helvetica, Arial, sans-serif;
-
+  font-family: $font-bold, Helvetica, Arial, sans-serif;
 }
 .yellow-color{
   color: $yellow;
   font-size: 54px;
-  font-family: SansProBold, Helvetica, Arial, sans-serif;
+  font-family: $font-bold, Helvetica, Arial, sans-serif;
 }
 .violet-color{
   color: $violet;
@@ -64,11 +41,17 @@ h2{
   width:100%;
   height: 100%;
   background: url("../../../public/img/fond_desk_lab.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   background-attachment: fixed;
+  .home-section-title-wrap a{
+    color: $white!important;
+    text-decoration: none;
+    &:focus{
+      text-decoration: none;
+    }
+    &:active{
+      text-decoration: none;
+    }
+  }
 }
 .body-black-bg{
   background-color: $body-black-bg;
@@ -122,23 +105,19 @@ h2{
 
 }
 /* nav bar */
-
 .navbar{
   position: fixed;
   top: 0px;
   width:73%;
 }
-
 #nav-burger:hover{
   stroke: black!important;
   cursor: pointer;
 }
-
 .st0:hover{
   color: black;
   stroke: black;
 }
-
 .displayed-nav{
   position: absolute;
   top: 0px;
@@ -150,24 +129,22 @@ h2{
   left: -25%;
   
 }
-
 .grey-nav{
   color: black!important;
   background-color:$grey;
+
 }
 
 .black-nav{
-  color: white!important;
+  color:$white;
   background-color: $body-black-bg;
+  a {
+    color: $white!important;
+    &:hover{
+      color: $yellow!important;
+    }
+  }
 }
-.black-nav a {
-  color: $white;
-}
-
-.black-nav a:hover{
-  color: $yellow;
-}
-
 .display-logo-bg{
   width: 100%;
   height: 8%;
@@ -177,7 +154,6 @@ h2{
   -webkit-transition: height 1s; 
   transition: height 1s;
 }
-
 #display-nav li{
   list-style-type: none;
 }
@@ -215,41 +191,30 @@ h2{
 .home-section-link{
   transition: 100ms;
   font-size: 54px;
-  font-family: SansProBold, Helvetica, Arial, sans-serif;
+  font-family: $font-bold, Helvetica, Arial, sans-serif;
 }
-
-
 .labs-section-link{
   transition: 100ms;
   font-size: 54px;
-  font-family: SansProBold, Helvetica, Arial, sans-serif;
+  font-family: $font-bold, Helvetica, Arial, sans-serif;
   color: white;
-
 }
-
-
 .labs-section-link-active{
-
   color: $yellow!important;
 }
-
 .home-section-link:hover{
   transition: 100ms;
   color: $red!important;
   cursor: pointer;
 }
-
 .home-section-link-active{
   transition: 100ms;
   color: $red!important;
-
 }
-
 .page-content{
   margin-top:80px;
   min-height: 100vh;
 }
-
 .margin-top-fifty{
   margin-top: 50px;
 }
@@ -259,12 +224,9 @@ h2{
 .margin-top-hundred{
   margin-top: 200px;
 }
-
 /* image & img transition*/
 .image { width: 100%}
 .image-loaded { opacity: 1; }
-
-
 .work-link-focus{
   position: absolute;
   z-index: 3;
@@ -278,23 +240,19 @@ h2{
     cursor: url('../../../public/img/cursor_violet.png'), auto!important;
   }
 }
-
 .invisible-bg{
   background: transparent!important;
 }
-
 .input-warning{
   transition: 100ms;
   border-color: #ff0066!important;
 }
-
 .arrow-back{
   width: 10%;
   &:hover{
   cursor: pointer;
   }
 }
-
 @media (min-width: 400px) {
   .nav-burger{
     float: right;
@@ -316,7 +274,6 @@ h2{
     }
   }
 }
-
 /* Larger than tablet */
 @media (max-width: 750px) {
   #side-nav-home-logo{
@@ -353,7 +310,6 @@ h2{
     cursor: pointer;
     transition: 100ms;
   }
-
 }
 
 /* Larger than Desktop HD */

@@ -1,7 +1,7 @@
 
 // Body
 $body-bg: #f5f8fa;
-$white: white!important;
+$white: white;
 $body-black-bg: #12000e;
 $black : black;
 $red: #ff0067;
@@ -27,7 +27,26 @@ $brand-warning: #cbb956;
 $brand-danger: #bf5329;
 
 // Typography
-
+$font-reg: 'SansProReg';
+$font-bold: 'SansProBold';
+$font-light: 'SansLight';
+$font-italic: 'SansProItalic';
+@font-face {
+    font-family: "SansProReg";
+    src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+}
+  @font-face {
+    font-family: "SansProBold";
+    src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+}
+  @font-face {
+    font-family: "SansProLight";
+    src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Light.ttf');
+}
+  @font-face {
+    font-family: "SansProItalic";
+    src: url('../../../public/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf');
+}
 
 
 
