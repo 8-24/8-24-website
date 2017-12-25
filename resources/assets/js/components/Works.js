@@ -15,21 +15,18 @@ export default class Works extends Component {
     };
     this.state = {works: []};
   }
-
   componentDidMount() {
     NavBarLogic("grey", "color");
     window.scrollTo(0, 0);
     if(this.props.display == "preview"){
       axios.get('http://127.0.0.1:8000/api/works/limit/4')
         .then(response => {
-          //console.log(response.data);
           this.setState({works: response.data})
         });
     }else{
 
       axios.get('http://127.0.0.1:8000/api/works/limit/400')
         .then(response => {
-          //console.log(response.data);
           this.setState({works: response.data})
         });
 
@@ -63,12 +60,11 @@ export default class Works extends Component {
       return <div className="block-preview three columns margin-top-fifty" key={item.id}>
                 <div className="work-link" >
                     <Link to={`/works/${item.slug}`} >
-                      <h2 id={item.slug}>{item.title}</h2>
+                      <h3 id={item.slug}>{item.title}</h3>
                     </Link>
                     <Link to={`/works/${item.slug}`} >
                       <ProgressiveImage
                         id={item.slug}
-                        //onClick={this.openGalery.bind(this)}
                         src={item.cover}
                         placeholder={item.cover}
                         style={{

@@ -8,7 +8,6 @@ export default class WorkPost extends Component{
     this.state = {gallery: ""}
   }
 
-
   componentDidMount(){
     NavBarLogic("grey", "color");
     window.scrollTo(0, 0);
@@ -22,8 +21,7 @@ export default class WorkPost extends Component{
   goTo(){
     this.props.history.push('/works');
   }
-
-
+  
   render(){
     return(
       <div className="margin-top-hundred">

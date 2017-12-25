@@ -25,6 +25,7 @@ h2 {
 body {
   font-family: "SansProReg", Helvetica, Arial, sans-serif;
   margin: 0px;
+  cursor: url(/images/cursor_violet.png?0ebc0d821817bd17c34d464ac62aa239), pointer;
 }
 
 .block-preview {
@@ -306,7 +307,7 @@ body {
 }
 
 .work-link a:hover {
-  cursor: url("/img/cursor_violet.png"), auto !important;
+  cursor: url(/images/cursor_violet.png?0ebc0d821817bd17c34d464ac62aa239), auto !important;
 }
 
 .invisible-bg {

@@ -10,8 +10,6 @@ export default class Blog extends Component{
   constructor(props){
     super(props);
     this.state = {posts: []}
-
-
   }
   componentDidMount() {
     NavBarLogic("grey", "color");
@@ -19,19 +17,15 @@ export default class Blog extends Component{
     if(this.props.display == "preview") {
       axios.get('http://127.0.0.1:8000/api/blog/limit/4')
         .then(response => {
-          //console.log(response.data);
           this.setState({posts: response.data})
         });
     }else{
       axios.get('http://127.0.0.1:8000/api/blog/limit/400')
         .then(response => {
-          //console.log(response.data);
           this.setState({posts: response.data})
         });
     }
   }
-
-
 
   ButtonDisplayMore(){
     if(this.props.display == "preview"){
@@ -53,22 +47,16 @@ export default class Blog extends Component{
     this.props.history.push('/');
   }
 
-
-
-
-
-
   PostsList(list){
     console.log(list);
     // list works to item
     var posts = list.map((item) => {
         return <div className="three columns margin-top-fifty" key={item.id}>
           <div className="work-link" >
-            <Link to={`/blog/${item.slug}`} ><h2 id={item.slug} >{item.title}</h2></Link>
+            <Link to={`/blog/${item.slug}`} ><h3 id={item.slug} >{item.title}</h3></Link>
             <Link to={`/blog/${item.slug}`} >
               <ProgressiveImage
                 id={item.slug}
-                //onClick={this.openPost.bind(this)}
                 src={item.cover}
                 placeholder={item.cover}
                 style={{
@@ -86,7 +74,6 @@ export default class Blog extends Component{
     return posts;
   }
 
-
   render(){
     return(
       <div className="margin-top-hundred">
@@ -98,7 +85,6 @@ export default class Blog extends Component{
         {this.ButtonDisplayMore()}
         {this.ButtonGoBack()}
       </div>
-
     )
   }
 }

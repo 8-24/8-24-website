@@ -19,6 +19,5 @@
         @yield('content')
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
 </body>
 </html>

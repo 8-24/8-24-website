@@ -21,7 +21,6 @@ export default class LabsCategory extends Component{
       .then(response => {
         this.setState({category: response.data})
       });
-
     axios.get('http://127.0.0.1:8000/api/labs/'+slugCat+'/posts')
       .then(response => {
         this.setState({posts: response.data})
@@ -32,7 +31,7 @@ export default class LabsCategory extends Component{
     var posts = list.map((item) => {
         return <div className="three columns margin-top-fifty" key={item.id}>
           <div className="lab-project-wrap work-link" >
-            <Link className="lab-project-link" to={`/labs/${this.props.match.params.category}/${item.slug}`} ><h2 id={item.slug} >{item.title}</h2></Link>
+            <Link className="lab-project-link" to={`/labs/${this.props.match.params.category}/${item.slug}`} ><h3 id={item.slug} >{item.title}</h3></Link>
             <Link to={`/labs/${this.props.match.params.category}/${item.slug}`} >
               <ProgressiveImage
                 id={item.slug}

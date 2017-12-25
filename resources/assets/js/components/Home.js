@@ -22,10 +22,8 @@ export default class Home extends Component{
     window.scrollTo(0, 0);
     axios.get('http://127.0.0.1:8000/api/home')
       .then(response => {
-        //console.log(response.data);
         this.setState({sections: response.data})
       });
-    NavBarLogic("grey", "illustration");
   }
 
   changeText(id){
@@ -35,9 +33,6 @@ export default class Home extends Component{
       {selectedSection: (Number(idCatched) - 1)} // cast to int
       );
     var sectionsTitles = document.getElementsByClassName('home-section-link-active');
-    if(sectionsTitles != undefined) {
-      //sectionsTitles.classList.remove('home-section-link-active');
-    }
     document.getElementById(idCatched).className = "home-section-link home-section-link-active";
   }
 
@@ -81,10 +76,6 @@ export default class Home extends Component{
           <Contact />
         </div>
       </div>
-
     )
   }
-
-
-
 }

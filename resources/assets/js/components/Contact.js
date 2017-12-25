@@ -16,7 +16,6 @@ export default class Home extends Component{
   handleForm(e){
     e.preventDefault();
     var email = document.getElementById('message-mail').value;
-    //alert(email);
     var content = document.getElementById('message-content').value;
     if(content != "" && content != null && email != "" && email != null){
 
@@ -39,7 +38,6 @@ export default class Home extends Component{
           });
       }else{
         // mail not valid
-        //alert('mail pas valide');
         document.getElementById('message-mail').className += ' input-warning';
       }
     }

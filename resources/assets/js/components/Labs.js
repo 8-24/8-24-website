@@ -27,14 +27,10 @@ export default class Labs extends Component{
 
   changeText(id){
     var idCatched = id.target.id;
-    //console.log(idCatched);
     this.setState(
       {selectedSection: (Number(idCatched) - 1)} // cast to int
     );
     var sectionsTitles = document.getElementsByClassName('home-section-link-active');
-    if(sectionsTitles != undefined) {
-      //sectionsTitles.classList.remove('home-section-link-active');
-    }
     document.getElementById(idCatched).className = "home-section-link home-section-link-active";
   }
 

@@ -7,7 +7,6 @@ export default class BlogPost extends Component{
     this.state = {post: {}}
   }
 
-
   componentDidMount(){
     NavBarLogic("grey", "color");
     window.scrollTo(0, 0);
@@ -15,12 +14,8 @@ export default class BlogPost extends Component{
 
     axios.get('http://127.0.0.1:8000/api'+path)
       .then(response => {
-        //console.log(response.data);
         this.setState({post: response.data})
       });
-
-    //document.getElementById('gallery-content').innerHTML = this.state.gallery.content;
-
   }
 
   goTo(){

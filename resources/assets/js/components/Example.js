@@ -42,10 +42,8 @@ export default class Example extends Component {
       {
         state = false;
       }
-
       if(state)
       {
-        console.log("show bg nav");
         document.getElementById('main-nav-wrap').classList.add('display-logo-bg');
       }else{
         document.getElementById('main-nav-wrap').classList.remove('display-logo-bg');
