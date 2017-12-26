@@ -18,7 +18,7 @@ export default class Home extends Component{
     //this.changeText = this.changeText.bind(this);
   }
   componentDidMount(){
-    NavBarLogic("grey", "illustration");
+    NavBarLogic("grey", "illustration", "violet");
     window.scrollTo(0, 0);
     axios.get('http://127.0.0.1:8000/api/home')
       .then(response => {

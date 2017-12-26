@@ -8,7 +8,7 @@ export default class BlogPost extends Component{
   }
 
   componentDidMount(){
-    NavBarLogic("grey", "color");
+    NavBarLogic("grey", "color", "black");
     window.scrollTo(0, 0);
     var path = this.props.location.pathname;
 

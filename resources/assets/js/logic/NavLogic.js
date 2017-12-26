@@ -2,8 +2,9 @@
 * @param {String}  mode - one of these two modes grey or black
 * @param {String}  page - one of these two pages illustration or color
 */
-export function NavBarLogic(mode, page){
-
+export function NavBarLogic(mode, page, logoColor){
+    var violetLogo = "/img/logo.svg";
+    var blackLogo = "/img/logo_black.svg";
     if(mode == "black"){
         var wrap = document.getElementById("app-agile-container");
         if(page == 'illustration'){
@@ -33,7 +34,14 @@ export function NavBarLogic(mode, page){
         }else{
             wrap.className = "grey-background";
         }
-        document.getElementById('nav-default-logo').style.display = 'block';     // hide default 8-24 logo
+
+        var defaultLogo = document.getElementById('nav-default-logo-img');
+        if(logoColor == "black"){
+            defaultLogo.src = blackLogo;
+        }else{
+            defaultLogo.src = violetLogo;
+        }
+        document.getElementById('nav-default-logo').style.display = 'block';     // show default 8-24 logo
         document.getElementById('nav-lab-logo').style.display = 'none';       // hide default 8-24 logo
         document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
         document.getElementById('red-burger').style.display = 'block';

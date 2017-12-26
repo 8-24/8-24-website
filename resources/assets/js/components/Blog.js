@@ -12,7 +12,7 @@ export default class Blog extends Component{
     this.state = {posts: []}
   }
   componentDidMount() {
-    NavBarLogic("grey", "color");
+    NavBarLogic("grey", "color", "black");
     window.scrollTo(0, 0);
     if(this.props.display == "preview") {
       axios.get('http://127.0.0.1:8000/api/blog/limit/4')

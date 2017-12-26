@@ -80,7 +80,7 @@ export default class Example extends Component {
                         <div className="row">
                           <div className="nav-logo-wrapper">
                               <Link to="/" id="nav-default-logo">
-                                  <img className="u-full-width nav-logo" src="/img/logo.svg" alt="8-24 agence logo"/>
+                                  <img id="nav-default-logo-img" className="u-full-width nav-logo" src="/img/logo.svg" alt="8-24 agence logo"/>
                               </Link>
                               <Link to="/labs" id="nav-lab-logo">
                                 <img className="u-full-width " src="/img/lab_logo.png" alt="8-24 laboratory logo"/>

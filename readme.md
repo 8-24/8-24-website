@@ -7,7 +7,7 @@ from your project :
 - `composer update`
 - `npm install`
 - `php artisan key:generate`
- copy the key base64:XXX...= in your env. file and past it to the APP_KEY value
+copy the key base64:XXX...= in your env. file and past it to the APP_KEY value
 - `php artisan migrate`
 Now the php side should work
 - `php artisan serve`
@@ -23,7 +23,6 @@ Now the php side should work
 - `npm run dev` To compile sass & JS
 - `php artisan migrate:refresh` To refresh the database 
 - `php artisan db:seed` To fill the database with seeder, to do after the refresh or it will be many duplications
-
 - To compile sass & JS
 - `npm run dev`
 ####To refresh the database
@@ -52,6 +51,9 @@ Now the php side should work
 - `git merge otherBranchName`
 ### Push commit to another branch
 - `git push origin anotherBranchName` , from your custom branch, i.e from design branch do `git push origin design` to put this branch online
+#### check your commit status
+- `git status`
+
 
 
 
