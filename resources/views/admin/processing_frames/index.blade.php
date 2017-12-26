@@ -59,7 +59,7 @@
                                     </td>
                                     <td><a href="/iframe/{{ $item->slug }}">{{ $item->title }}</a></td>
                                     <td>
-                                            &lt;iframe src="http://localhost:8000/iframe/{{ $item->slug }}" width="100%" height="680"&gt;&lt;/iframe&gt; 
+                                            &lt;iframe src="http://localhost:8000/iframe/{{ $item->slug }}" width="100%" height="680" scrolling="no" style="border:0;" &gt;&lt;/iframe&gt; 
                                     </td>
                                     <td>
                                         <form action="{{ route('deleteProcessingPost') }}" method="post">

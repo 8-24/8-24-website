@@ -23,7 +23,7 @@ Now the php side should work
 - `npm run dev` To compile sass & JS
 - `php artisan migrate:refresh` To refresh the database 
 - `php artisan db:seed` To fill the database with seeder, to do after the refresh or it will be many duplications
-=======
+
 - To compile sass & JS
 - `npm run dev`
 ####To refresh the database

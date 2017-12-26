@@ -81,7 +81,7 @@ class LabsPostSeeder extends Seeder
             'category_id' => 1,
             'cover' => 'http://lorempicsum.com/futurama/255/200/2',
             'description' => 'Decsription de mon premier post en moins de 300 mots',
-            'content' => '<p><h1>Mon Troisième Labs Posr</h1> voici mon troisième post : <iframe src="http://localhost:8000/iframe/mondrian-generator-234" width="100%" height="680"></iframe> </p>',
+            'content' => '<p><h1>Mon Troisième Labs Posr</h1> voici mon troisième post : <iframe src="http://localhost:8000/iframe/mondrian-generator-234" width="100%" height="680" scrolling="no" style="border:0;"></iframe> </p>',
         ]);
     }
 }

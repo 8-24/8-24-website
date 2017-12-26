@@ -16,9 +16,6 @@ class PagesTest extends TestCase
      */
     public function testHomePages()
     {
-        //$this->assertTrue(true);
-        //$response = $this->call('GET', '/api/home');
-        //$this->assertEquals(200, $response->status());
 
     }
 }
