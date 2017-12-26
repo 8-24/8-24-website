@@ -38,4 +38,20 @@ Now the php side should work
 #### To get updates from another collaborator
 - `git pull upstream master`
 - `git pull origin master`
+### Branches 
+#### To create on branch
+- `git branch branchName`
+#### Switch ton another branch
+- `git checkout branchName`
+#### Switch to another commit
+- `git checkout commitName`
+#### Merge one branch to master
+#### Swtitch to master
+- `git checkout master`
+#### Merge another branch width master
+- `git merge otherBranchName`
+### Push commit to another branch
+- `git push origin anotherBranchName` , from your custom branch, i.e from design branch do `git push origin design` to put this branch online
+
+
 
