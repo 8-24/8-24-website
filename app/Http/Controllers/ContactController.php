@@ -59,12 +59,20 @@ class ContactController extends Controller
     {
         $email = $request['email'];
         $content = $request['content'];
-        $message = new ContactMessage();
-        $message->email = $email;
-        $message->content = $content;
-        $message->state = 0;
-        $message->save();
-        return response()->json(200);
+
+        if( (empty($email) && !isset($email)) || (empty($content) && !isset($content)) )
+        {
+            return response()->json([], 400);
+        }else{
+
+            $message = new ContactMessage();
+            $message->email = $email;
+            $message->content = $content;
+            $message->state = 0;
+            $message->save();
+            return response()->json(200);
+        }
+
     }
 
     /**

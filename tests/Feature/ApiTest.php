@@ -53,4 +53,35 @@ class ApiTest extends TestCase
         $response = $this->call('GET', '/api/labs/categories/creative-coding');
         $this->assertEquals(200, $response->status());
     }
+
+    public function testLabPost(){
+        
+        $this->assertTrue(true);
+        $response = $this->call('GET', '/api/labs/posts/creative-1');
+        $this->assertEquals(200, $response->status());
+    }
+
+    public function testAddContactMessage(){
+
+        $this->assertTrue(true);
+        $response = $this->post('/api/add-contact-message', []);
+        $this->assertEquals(400, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->post('/api/add-contact-message', ['content' => '', 'email' => '']);
+        $this->assertEquals(400, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->post('/api/add-contact-message', ['content' => 'content', 'email' => '']);
+        $this->assertEquals(400, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->post('/api/add-contact-message', ['content' => '', 'email' => 'content']);
+        $this->assertEquals(400, $response->status());
+        $this->assertEquals(400, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->post('/api/add-contact-message', ['content' => 'content', 'email' => 'content']);
+        $this->assertEquals(200, $response->status());
+    }
 }
