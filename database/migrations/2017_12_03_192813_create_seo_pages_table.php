@@ -16,7 +16,7 @@ class CreateSeoPagesTable extends Migration
         Schema::create('seo_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->text('keywords');
             $table->text('description');
             $table->boolean('cover_pic_vid');

@@ -18,7 +18,7 @@ class CreateBlogPostsTable extends Migration
             $table->integer('category');
             $table->text('keywords');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('cover');
             $table->text('description');
             $table->longText('content');

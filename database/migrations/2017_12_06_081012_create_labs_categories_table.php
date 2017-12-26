@@ -16,7 +16,7 @@ class CreateLabsCategoriesTable extends Migration
         Schema::create('labs_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('keywords');
             $table->text('description');
             $table->string('cover');

@@ -16,7 +16,7 @@ class CreateLabsPostsTable extends Migration
         Schema::create('labs_posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->integer('category_id');
             $table->string('cover');
             $table->text('keywords');

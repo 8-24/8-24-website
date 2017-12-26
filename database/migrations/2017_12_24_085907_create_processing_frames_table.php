@@ -16,7 +16,7 @@ class CreateProcessingFramesTable extends Migration
         Schema::create('processing_frames', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->longtext('script');
             $table->timestamps();
         });

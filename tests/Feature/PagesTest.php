@@ -14,35 +14,11 @@ class PagesTest extends TestCase
      *
      * @return void
      */
-    public function testBasicPages()
+    public function testHomePages()
     {
-        $this->assertTrue(true);
-        $response = $this->call('GET', '/login');
+        //$this->assertTrue(true);
+        //$response = $this->call('GET', '/api/home');
+        //$this->assertEquals(200, $response->status());
 
-        $this->assertEquals(200, $response->status());
-
-        $this->assertTrue(true);
-        $response = $this->call('GET', '/');
-        $this->assertEquals(200, $response->status());
-        $this->assertEquals(200, $response->status());
-
-        $this->assertTrue(true);
-        $response = $this->call('GET', '/blog');
-        $this->assertEquals(200, $response->status());
-        $this->assertEquals(200, $response->status());
-
-        $this->assertTrue(true);
-        $response = $this->call('GET', '/labs');
-        $this->assertEquals(200, $response->status());
-        $this->assertEquals(200, $response->status());
-
-        $this->assertTrue(true);
-        $response = $this->call('GET', '/works');
-        $this->assertEquals(200, $response->status());
-        $this->assertEquals(200, $response->status());
-
-        $this->assertTrue(true);
-        $response = $this->call('GET', '/contact');
-        $this->assertEquals(200, $response->status());
     }
 }
