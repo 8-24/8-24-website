@@ -47424,7 +47424,7 @@ var Example = function (_Component) {
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/labs/:category', component: __WEBPACK_IMPORTED_MODULE_11__labsCategory__["a" /* default */] }),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/labs/:category/:slug', component: __WEBPACK_IMPORTED_MODULE_12__LabsPost__["a" /* default */] }),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/contact', component: __WEBPACK_IMPORTED_MODULE_7__Contact__["a" /* default */] }),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/error/404', component: __WEBPACK_IMPORTED_MODULE_13__error_404__["a" /* default */] })
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/error/404', component: __WEBPACK_IMPORTED_MODULE_13__error_404__["a" /* default */] })
                 )
               )
             )
@@ -72837,6 +72837,8 @@ var WorkPost = function (_Component) {
       var path = this.props.location.pathname;
       axios.get('http://127.0.0.1:8000/api' + path).then(function (response) {
         _this2.setState({ gallery: response.data });
+      }).catch(function (error) {
+        _this2.props.history.push('/works');
       });
     }
   }, {
@@ -73075,13 +73077,15 @@ var BlogPost = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      Object(__WEBPACK_IMPORTED_MODULE_2__logic_NavLogic__["a" /* NavBarLogic */])("grey", "color", "black");
-      window.scrollTo(0, 0);
       var path = this.props.location.pathname;
-
       axios.get('http://127.0.0.1:8000/api' + path).then(function (response) {
         _this2.setState({ post: response.data });
+      }).catch(function (error) {
+        _this2.props.history.push('/blog');
       });
+
+      Object(__WEBPACK_IMPORTED_MODULE_2__logic_NavLogic__["a" /* NavBarLogic */])("grey", "color", "black");
+      window.scrollTo(0, 0);
     }
   }, {
     key: 'goTo',
@@ -73281,9 +73285,13 @@ var LabsCategory = function (_Component) {
       var slugCat = this.props.match.params.category;
       axios.get('http://127.0.0.1:8000/api/labs/categories/' + slugCat).then(function (response) {
         _this2.setState({ category: response.data });
+      }).catch(function (error) {
+        _this2.props.history.push('/labs');
       });
       axios.get('http://127.0.0.1:8000/api/labs/' + slugCat + '/posts').then(function (response) {
         _this2.setState({ posts: response.data });
+      }).catch(function (error) {
+        _this2.props.history.push('/labs');
       });
     }
   }, {
@@ -73410,6 +73418,8 @@ var LabsPost = function (_Component) {
       var path = this.props.location.pathname;
       axios.get('http://127.0.0.1:8000/api/labs/posts/' + this.props.match.params.slug).then(function (response) {
         _this2.setState({ post: response.data });
+      }).catch(function (error) {
+        _this2.props.history.push('/labs/' + _this2.props.match.params.category);
       });
     }
   }, {
@@ -73600,7 +73610,7 @@ var Error404 = function (_Component) {
             "p",
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h2",
+              "h1",
               null,
               "Oups! Error 404!"
             )

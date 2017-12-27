@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ProcessingFrame;
+use agence\ProcessingFrame;
 class ProcessingFrameController extends Controller
 {
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\BlogCategory;
-use App\BlogPost;
-use App\SeoPage;
+use agence\BlogCategory;
+use agence\BlogPost;
+use agence\SeoPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -53,12 +53,25 @@ class BlogPostController extends Controller
     public function servPostIndex($slug)
     {
         $data = BlogPost::where('slug', $slug)->first();
-        $seo = BlogPost::where('slug', $slug)->first();
-        return view('welcome', ['data' => $data, 
-                                'seo_keywords' => $seo->keywords,
-                                'seo_description' => $seo->description, 
-                                'seo_author' => $seo->author, 
-                                'seo_cover' => $seo->cover]);
+
+        if($data != null)
+        {
+            $seo = BlogPost::where('slug', $slug)->first();
+            return view('welcome', ['data' => $data, 
+                                    'seo_keywords' => $seo->keywords,
+                                    'seo_description' => $seo->description, 
+                                    'seo_author' => $seo->author, 
+                                    'seo_cover' => $seo->cover]);
+        }else
+        {
+
+            $seo = SeoPage::where('slug', 'error-404')->first();
+            return view('welcome', ['data' => $data, 
+                                    'seo_keywords' => $seo->keywords,
+                                    'seo_description' => $seo->description, 
+                                    'seo_author' => $seo->author, 
+                                    'seo_cover' => $seo->cover]);
+        }
     }
 
     public function index($limit)
@@ -124,7 +137,12 @@ class BlogPostController extends Controller
     public function show($slug)
     {
         $post = BlogPost::where('slug', $slug)->first();
-        return response()->json($post, 200);
+        if($post != null){
+            return response()->json($post, 200);
+        }else{
+            $message = "Aucun article de blog corréspondant n'a été trouvé";
+            return response()->json($message, 404);
+        }
     }
 
     /**

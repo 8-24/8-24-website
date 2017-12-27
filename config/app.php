@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        agence\Providers\AppServiceProvider::class,
+        agence\Providers\AuthServiceProvider::class,
+        // agence\Providers\BroadcastServiceProvider::class,
+        agence\Providers\EventServiceProvider::class,
+        agence\Providers\RouteServiceProvider::class,
         Laravel\Presets\PresetServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,

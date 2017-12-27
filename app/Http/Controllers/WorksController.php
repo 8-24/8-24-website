@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\SeoPage;
-use App\Work;
+use agence\SeoPage;
+use agence\Work;
 use Illuminate\Http\Request;
 
 class WorksController extends Controller
@@ -50,11 +50,21 @@ class WorksController extends Controller
     {
         $currenLink = $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $data = Work::where('slug', $slug)->first();
-        return view('welcome', ['data' => $data,
+        if($data != null){
+            return view('welcome', ['data' => $data,
             'seo_keywords' => $data->keywords,
             'seo_description' => $data->description,
             'current_link' => $currenLink
-        ]);
+            ]);
+        }else{
+            $seo = SeoPage::where('slug', 'error-404')->first();
+            return view('welcome', ['data' => $data, 
+                                    'seo_keywords' => $seo->keywords,
+                                    'seo_description' => $seo->description, 
+                                    'seo_author' => $seo->author, 
+                                    'seo_cover' => $seo->cover]);
+        }
+
     }
 
     public function index($limit)
@@ -114,7 +124,11 @@ class WorksController extends Controller
     public function show($slug)
     {
         $data = Work::where('slug', $slug)->first();
-        return response()->json($data, 200);
+        if($data != null){
+            return response()->json($data, 200);
+        }else{
+            return response()->json(['message' => 'Aucun Post trouvé :/'], 404);
+        }
     }
 
     /**

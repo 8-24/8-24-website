@@ -51,6 +51,14 @@ class SeoPagesSeeder extends Seeder
             'cover' => 'http://lorempicsum.com/futurama/255/200/2',
             'description' => 'Description SEO de ma page labs'
         ]);
+        DB::table('seo_pages')->insert([
+            'keywords' => 'mots clés de ma page error 404',
+            'title' => "Error 404",
+            'slug' => 'error-404',
+            'cover_pic_vid' => 1,
+            'cover' => 'http://lorempicsum.com/futurama/255/200/2',
+            'description' => 'Description SEO de ma page error 404'
+        ]);
 
 
     }

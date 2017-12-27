@@ -121,7 +121,7 @@ export default class Example extends Component {
                         <Route exact path="/labs/:category" component={LabsCategory} />
                         <Route exact path="/labs/:category/:slug" component={LabsPost} />
                         <Route exact path="/contact" component={Contact}/>
-                        <Route path="/error/404" component={Error404} /> 
+                        <Route exact path="/error/404" component={Error404} /> 
                       </AnimatedSwitch>  
                       </div>
                   </div>

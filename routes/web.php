@@ -27,6 +27,7 @@ Route::get('/labs/{category}', 'LabsCategoriesController@servShow');
 Route::get('/labs/{category}/{slug}', 'LabsPostController@servShow');
 Route::get('/labs', 'LabsCategoriesController@servIndex');
 Route::get('/iframe/{slug}', 'ProcessingFrameController@show');
+Route::get('/error/404', 'ErrorController@index');
 
 Route::group(['prefix' => '/admin',  'middleware' => 'auth'], function()
 {

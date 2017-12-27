@@ -15,6 +15,8 @@ export default class WorkPost extends Component{
     axios.get('http://127.0.0.1:8000/api'+path)
       .then(response => {
         this.setState({gallery: response.data})
+      }).catch(error => {
+        this.props.history.push('/works');
       });
   }
 

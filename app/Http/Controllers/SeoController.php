@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\SeoPage;
+use agence\SeoPage;
 use Illuminate\Http\Request;
 
 class SeoController extends Controller
