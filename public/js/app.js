@@ -73180,7 +73180,7 @@ var Labs = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Labs.__proto__ || Object.getPrototypeOf(Labs)).call(this, props));
 
     _this.state = {
-      selectedSection: 0,
+      selectedSection: 10,
       categories: [{ content: "Simple! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis." }, { content: "Innovant! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis." }, { content: "Original! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis." }]
     };
     return _this;

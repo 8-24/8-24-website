@@ -275,6 +275,15 @@ h2{
   }
   .home-section-title-wrap{
     float: left;
+    a{
+
+      &:active{
+        text-decoration: none;
+      }
+      &:focus{
+        text-decoration: none;
+      }
+    }
   }
   .close-nav-btn{
     width: 3%;

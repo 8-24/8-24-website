@@ -375,6 +375,14 @@ h2 {
     float: left;
   }
 
+  .home-section-title-wrap a:active {
+    text-decoration: none;
+  }
+
+  .home-section-title-wrap a:focus {
+    text-decoration: none;
+  }
+
   .close-nav-btn {
     width: 3%;
     -webkit-transition: 100ms;
