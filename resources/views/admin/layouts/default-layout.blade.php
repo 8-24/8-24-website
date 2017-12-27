@@ -12,6 +12,9 @@
     <title>Admin 8-24 agence</title>
     <link href="{{ asset('css/skel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dahsboard-style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/console.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/lib/codemirror.css') }}" rel="stylesheet">
+
 </head>
 <body>
 <header class="app-header navbar">
@@ -21,14 +24,12 @@
     <a class="navbar-brand" href="/admin/">
         <img src="{{ asset('/img/logo.svg') }}" alt="" style="width: 60%; height: auto;margin: 5%;">
     </a>
+    <span class="admin-username">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>
 </header>
     <div class="app-body">
         <div class="sidebar">
             <nav class="sidebar-nav">
                 <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-primary">NEW</span></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-puzzle"></i> /</a>
                     </li>
@@ -70,17 +71,14 @@
                 </div>
             </div>
         </main>
-<<<<<<< HEAD
     </div>
-=======
-<!--</div>-->
 </div>
->>>>>>> processing
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+<script src="{{ asset('js/lib/codemirror.js') }}"></script>
 <script>
     $('#lfm').filemanager('image');
     var editor_config = {
@@ -117,9 +115,12 @@
 
     tinymce.init(editor_config);
 </script>
-<<<<<<< HEAD
-=======
+<script>
+var myTextarea = document.getElementById('code-editor');
+  var editor = CodeMirror.fromTextArea(myTextarea, {
+    lineNumbers: true
+  });
+</script>
 
->>>>>>> processing
 </body>
 </html>

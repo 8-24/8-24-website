@@ -21,7 +21,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="">Script / Pour Crea-Coding</label>
-                                        <textarea class="form-control" name="script" id="" cols="30" rows="10"></textarea>
+                                        <textarea id="code-editor" class="form-control" name="script" id="" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
