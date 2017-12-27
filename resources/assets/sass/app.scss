@@ -252,10 +252,19 @@ h2{
 }
 .arrow-back{
   width: 10%;
+  padding-left: 0%;
+  animation-name: apparitionMoveLeft;
+  animation-duration: 2s;
   &:hover{
   cursor: pointer;
   }
 }
+
+@keyframes apparitionMoveLeft{
+  0%   {padding-left: 15%;}
+  100%   {padding-left: 0%;}
+}
+
 /* #############   RESPONSIVE   ############# */
 
 @media (min-width: 400px) {

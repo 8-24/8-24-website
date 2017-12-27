@@ -331,10 +331,35 @@ h2 {
 
 .arrow-back {
   width: 10%;
+  padding-left: 0%;
+  -webkit-animation-name: apparitionMoveLeft;
+          animation-name: apparitionMoveLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .arrow-back:hover {
   cursor: pointer;
+}
+
+@-webkit-keyframes apparitionMoveLeft {
+  0% {
+    padding-left: 15%;
+  }
+
+  100% {
+    padding-left: 0%;
+  }
+}
+
+@keyframes apparitionMoveLeft {
+  0% {
+    padding-left: 15%;
+  }
+
+  100% {
+    padding-left: 0%;
+  }
 }
 
 /* #############   RESPONSIVE   ############# */
