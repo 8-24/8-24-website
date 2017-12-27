@@ -60,7 +60,7 @@ export default class Blog extends Component{
                 src={item.cover}
                 placeholder={item.cover}
                 style={{
-                  height: 300,
+                  height: 200,
                   backgroundSize: 'contain',
                   backgroundPosition: '',
                 }}

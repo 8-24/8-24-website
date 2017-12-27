@@ -15051,7 +15051,7 @@ var Works = function (_Component) {
                 src: item.cover,
                 placeholder: item.cover,
                 style: {
-                  height: 300,
+                  height: 200,
                   backgroundSize: 'contain',
                   backgroundPosition: ''
                 }
@@ -71452,7 +71452,7 @@ var Blog = function (_Component) {
                 src: item.cover,
                 placeholder: item.cover,
                 style: {
-                  height: 300,
+                  height: 200,
                   backgroundSize: 'contain',
                   backgroundPosition: ''
                 }
@@ -73021,7 +73021,7 @@ var Blog = function (_Component) {
                 src: item.cover,
                 placeholder: item.cover,
                 style: {
-                  height: 300,
+                  height: 200,
                   backgroundSize: 'contain',
                   backgroundPosition: ''
                 }
@@ -73351,9 +73351,9 @@ var LabsCategory = function (_Component) {
                 src: item.cover,
                 placeholder: item.cover,
                 style: {
-                  height: 300,
+                  height: 200,
                   backgroundSize: 'contain',
-                  backgroundPosition: 'center center'
+                  backgroundPosition: 'center top'
                 }
               })
             )
