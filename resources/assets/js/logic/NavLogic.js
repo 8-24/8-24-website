@@ -45,6 +45,7 @@ export function NavBarLogic(mode, page, logoColor){
         document.getElementById('nav-default-logo').style.display = 'block';     // show default 8-24 logo
         document.getElementById('nav-lab-logo').style.display = 'none';       // hide default 8-24 logo
         document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
+        document.getElementById('side-nav-labs-logo').style.display = 'block';
         document.getElementById('red-burger').style.display = 'block';
         document.getElementById('yellow-burger').style.display = 'none';
     

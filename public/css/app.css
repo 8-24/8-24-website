@@ -337,6 +337,8 @@ h2 {
   cursor: pointer;
 }
 
+/* #############   RESPONSIVE   ############# */
+
 @media (min-width: 400px) {
   .nav-burger {
     float: right;
@@ -359,6 +361,10 @@ h2 {
 
   .close-nav-btn:hover {
     cursor: pointer;
+  }
+
+  #side-nav-wrap {
+    display: none;
   }
 }
 
@@ -406,6 +412,10 @@ h2 {
     -webkit-transition: 100ms;
     transition: 100ms;
   }
+
+  #side-nav-wrap {
+    display: none;
+  }
 }
 
 /* Larger than Desktop HD */
@@ -415,6 +425,10 @@ h2 {
     float: right;
     width: 3%;
     margin-top: 10px;
+  }
+
+  #side-nav-wrap {
+    display: block;
   }
 }
 

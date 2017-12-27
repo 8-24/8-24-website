@@ -67,12 +67,14 @@ export default class Example extends Component {
         return (
           <Router>
               <div id="app-agile-container" className="white-background">
+              <div id="side-nav-wrap">
                 <Link to="/" id="side-nav-home-logo">
-                  <img className="u-full-width nav-logo" src="/img/logo_white.svg" alt="8-24 agence logo"/>
+                  <img className="u-full-width nav-logo" src="/img/logo_white.svg" alt="8-24, agence logo"/>
                 </Link>
                 <Link to="/labs" id="side-nav-labs-logo">
-                  <img className="u-full-width nav-logo" src="/img/lab_logo.svg" alt="8-24 agence lab logo"/>
+                  <img className="u-full-width nav-logo" src="/img/lab_logo.svg" alt="8-24, agence lab logo"/>
                 </Link>
+              </div>
                 <div className="container">
                   <div className="twelve columns">
                       <div id="main-nav-wrap" className=""></div>

@@ -2146,6 +2146,7 @@ function NavBarLogic(mode, page, logoColor) {
         document.getElementById('nav-default-logo').style.display = 'block'; // show default 8-24 logo
         document.getElementById('nav-lab-logo').style.display = 'none'; // hide default 8-24 logo
         document.getElementById('side-nav-home-logo').style.display = 'none'; // hide side home btn
+        document.getElementById('side-nav-labs-logo').style.display = 'block';
         document.getElementById('red-burger').style.display = 'block';
         document.getElementById('yellow-burger').style.display = 'none';
 
@@ -47302,14 +47303,18 @@ var Example = function (_Component) {
           'div',
           { id: 'app-agile-container', className: 'white-background' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-            { to: '/', id: 'side-nav-home-logo' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/logo_white.svg', alt: '8-24 agence logo' })
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-            { to: '/labs', id: 'side-nav-labs-logo' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/lab_logo.svg', alt: '8-24 agence lab logo' })
+            'div',
+            { id: 'side-nav-wrap' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+              { to: '/', id: 'side-nav-home-logo' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/logo_white.svg', alt: '8-24, agence logo' })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+              { to: '/labs', id: 'side-nav-labs-logo' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/lab_logo.svg', alt: '8-24, agence lab logo' })
+            )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
