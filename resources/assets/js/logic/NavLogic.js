@@ -27,6 +27,10 @@ export function NavBarLogic(mode, page, logoColor){
 
         document.getElementById('main-nav-wrap').classList.remove('grey-nav');
         document.getElementById('main-nav-wrap').classList.add('black-nav');
+
+        // responsive logo
+        document.getElementById('side-nav-responsive-labs-logo').style.display = 'none';
+        document.getElementById('side-nav-responsive-home-logo').style.display = 'block';
     } else
     {
         var wrap = document.getElementById("app-agile-container");
@@ -57,6 +61,10 @@ export function NavBarLogic(mode, page, logoColor){
 
         document.getElementById('main-nav-wrap').classList.remove('black-nav');
         document.getElementById('main-nav-wrap').classList.add('grey-nav');
+
+        // responsive logo
+        document.getElementById('side-nav-responsive-labs-logo').style.display = 'block';
+        document.getElementById('side-nav-responsive-home-logo').style.display = 'none';
     }
 
 

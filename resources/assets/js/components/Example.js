@@ -87,6 +87,14 @@ export default class Example extends Component {
                               <Link to="/labs" id="nav-lab-logo">
                                 <img className="u-full-width " src="/img/lab_logo.png" alt="8-24 laboratory logo"/>
                                </Link>
+                               <div id="side-nav-responsive">
+                                <Link to="/" id="side-nav-responsive-home-logo">
+                                  <img className="u-full-width nav-logo" src="/img/logo_white.svg" alt="8-24, agence logo"/>
+                                </Link>
+                                <Link to="/labs" id="side-nav-responsive-labs-logo">
+                                  <img className="u-full-width nav-logo" src="/img/lab_logo.svg" alt="8-24, agence lab logo"/>
+                                </Link>
+                              </div>
                               <div id="nav-burger" className="nav-burger" onClick={this.navInteract}>
                                   <img id="red-burger" className="u-full-width" src="/img/menu_burger.svg" alt=""/>
                                   <img id="yellow-burger" className="u-full-width" src="/img/menu_burger_yellow.svg" alt=""/>

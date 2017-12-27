@@ -281,6 +281,11 @@ h2{
   #side-nav-wrap{
     display: none;
   }
+  #side-nav-responsive{
+    display: block;
+    width: 40%;
+    float: left;
+  }
 
 }
 /* Larger than tablet */
@@ -322,6 +327,11 @@ h2{
   #side-nav-wrap{
     display: none;
   }
+  #side-nav-responsive{
+    display: block;
+    width: 40%;
+    float: left;
+  }
 }
 
 /* Larger than Desktop HD */
@@ -334,6 +344,8 @@ h2{
   #side-nav-wrap{
     display: block;
   }
-
+  #side-nav-responsive{
+    display: none;
+  }
 
 }

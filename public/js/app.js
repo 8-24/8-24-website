@@ -2129,6 +2129,10 @@ function NavBarLogic(mode, page, logoColor) {
 
         document.getElementById('main-nav-wrap').classList.remove('grey-nav');
         document.getElementById('main-nav-wrap').classList.add('black-nav');
+
+        // responsive logo
+        document.getElementById('side-nav-responsive-labs-logo').style.display = 'none';
+        document.getElementById('side-nav-responsive-home-logo').style.display = 'block';
     } else {
         var wrap = document.getElementById("app-agile-container");
         if (page == 'illustration') {
@@ -2158,6 +2162,10 @@ function NavBarLogic(mode, page, logoColor) {
 
         document.getElementById('main-nav-wrap').classList.remove('black-nav');
         document.getElementById('main-nav-wrap').classList.add('grey-nav');
+
+        // responsive logo
+        document.getElementById('side-nav-responsive-labs-logo').style.display = 'block';
+        document.getElementById('side-nav-responsive-home-logo').style.display = 'none';
     }
 }
 
@@ -47341,6 +47349,20 @@ var Example = function (_Component) {
                       __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
                       { to: '/labs', id: 'nav-lab-logo' },
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width ', src: '/img/lab_logo.png', alt: '8-24 laboratory logo' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'div',
+                      { id: 'side-nav-responsive' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+                        { to: '/', id: 'side-nav-responsive-home-logo' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/logo_white.svg', alt: '8-24, agence logo' })
+                      ),
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+                        { to: '/labs', id: 'side-nav-responsive-labs-logo' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/lab_logo.svg', alt: '8-24, agence lab logo' })
+                      )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       'div',
