@@ -2101,8 +2101,9 @@ module.exports = ReactUpdates;
 /* harmony export (immutable) */ __webpack_exports__["a"] = NavBarLogic;
 /* unused harmony export LogoLogic */
 /*
-* @param {String}  mode - one of these two modes grey or black
-* @param {String}  page - one of these two pages illustration or color
+* @param {string}  mode - one of these two modes grey or black
+* @param {string}  page - one of these two pages illustration or color
+* @param {string}  logoColor - violet or black
 */
 function NavBarLogic(mode, page, logoColor) {
     var violetLogo = "/img/logo.svg";
@@ -62868,7 +62869,6 @@ var Home = function (_Component) {
       selectedSection: 0,
       sections: [{ content: "Simple! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis." }, { content: "Innovant! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis." }, { content: "Original! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis." }]
     };
-    //this.changeText = this.changeText.bind(this);
     return _this;
   }
 

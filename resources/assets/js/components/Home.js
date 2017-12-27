@@ -15,7 +15,6 @@ export default class Home extends Component{
         {content: "Original! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tristique massa, a fermentum risus consectetur quis."}
       ]
     };
-    //this.changeText = this.changeText.bind(this);
   }
   componentDidMount(){
     NavBarLogic("grey", "illustration", "violet");

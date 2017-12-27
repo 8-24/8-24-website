@@ -319,10 +319,6 @@ h2 {
   text-decoration: none;
 }
 
-.work-link a:hover {
-  cursor: url(/images/cursor_violet.png?0ebc0d821817bd17c34d464ac62aa239), auto !important;
-}
-
 .invisible-bg {
   background: transparent !important;
 }

@@ -1,6 +1,7 @@
 /*
-* @param {String}  mode - one of these two modes grey or black
-* @param {String}  page - one of these two pages illustration or color
+* @param {string}  mode - one of these two modes grey or black
+* @param {string}  page - one of these two pages illustration or color
+* @param {string}  logoColor - violet or black
 */
 export function NavBarLogic(mode, page, logoColor){
     var violetLogo = "/img/logo.svg";
