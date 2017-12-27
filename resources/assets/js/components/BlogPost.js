@@ -7,15 +7,21 @@ export default class BlogPost extends Component{
     this.state = {post: {}}
   }
 
-  componentDidMount(){
+  componentDidMount()
+  {
+    var path = this.props.location.pathname;
+    axios.get('http://127.0.0.1:8000/api'+path)
+    .then(response => {
+      this.setState({post: response.data})
+    }).catch(error => {
+      this.props.history.push('/blog');
+    });
+
     NavBarLogic("grey", "color", "black");
     window.scrollTo(0, 0);
-    var path = this.props.location.pathname;
+    
 
-    axios.get('http://127.0.0.1:8000/api'+path)
-      .then(response => {
-        this.setState({post: response.data})
-      });
+
   }
 
   goTo(){

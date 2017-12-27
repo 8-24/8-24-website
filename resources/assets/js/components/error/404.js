@@ -14,9 +14,9 @@ export default class Error404 extends Component{
       <div>
         <div className="margin-top-hundred">
           <p>
-            <h2>
+            <h1>
               Oups! Error 404! 
-            </h2>
+            </h1>
           </p>
         </div>
       </div>

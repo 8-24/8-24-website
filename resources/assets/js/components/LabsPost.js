@@ -18,6 +18,8 @@ export default class LabsPost extends Component{
     axios.get('http://127.0.0.1:8000/api/labs/posts/'+this.props.match.params.slug)
       .then(response => {
         this.setState({post: response.data});
+      }).catch(error => {
+        this.props.history.push('/labs/'+this.props.match.params.category);
       });
   }
   

@@ -21,11 +21,26 @@ class ApiTest extends TestCase
         $this->assertEquals(200, $response->status());
 
     }
+
+    public function testBlogPost(){
+        $this->assertTrue(true);
+        $response = $this->call('GET', '/api/blog/premier-post');
+        $this->assertEquals(200, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->call('GET', '/api/blog/premier-post-innexistant');
+        $this->assertEquals(404, $response->status());
+    }
+
     public function testWorksItem()
     {
         $this->assertTrue(true);
         $response = $this->call('GET', '/api/works/premier-work');
         $this->assertEquals(200, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->call('GET', '/api/works/premier-work-innexistant');
+        $this->assertEquals(404, $response->status());
 
     }
     
@@ -52,6 +67,10 @@ class ApiTest extends TestCase
         $this->assertTrue(true);
         $response = $this->call('GET', '/api/labs/categories/creative-coding');
         $this->assertEquals(200, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->call('GET', '/api/labs/categories/categorie-innexistante');
+        $this->assertEquals(404, $response->status());
     }
 
     public function testLabPost(){
@@ -59,6 +78,10 @@ class ApiTest extends TestCase
         $this->assertTrue(true);
         $response = $this->call('GET', '/api/labs/posts/creative-1');
         $this->assertEquals(200, $response->status());
+
+        $this->assertTrue(true);
+        $response = $this->call('GET', '/api/labs/posts/creative-1-innexistant');
+        $this->assertEquals(404, $response->status());
     }
 
     public function testAddContactMessage(){

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\LabsCategory;
-use App\SeoPage;
+use agence\LabsCategory;
+use agence\SeoPage;
 use Illuminate\Http\Request;
 
 class LabsCategoriesController extends Controller
@@ -45,11 +45,20 @@ class LabsCategoriesController extends Controller
     {
         $currenLink = $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $data = LabsCategory::where('slug', $category)->first();
-        return view('welcome', ['data' => $data,
-            'seo_keywords' => $data->keywords,
-            'seo_description' => $data->description,
-            'current_link' => $currenLink
-        ]);
+        if($data != null){
+            return view('welcome', ['data' => $data,
+                'seo_keywords' => $data->keywords,
+                'seo_description' => $data->description,
+                'current_link' => $currenLink
+            ]);
+        }else{
+            $seo = SeoPage::where('slug', 'error-404')->first();
+            return view('welcome', ['data' => $data, 
+                                    'seo_keywords' => $seo->keywords,
+                                    'seo_description' => $seo->description, 
+                                    'seo_author' => $seo->author, 
+                                    'seo_cover' => $seo->cover]);
+        }
     }
 
     public function index()
@@ -101,7 +110,12 @@ class LabsCategoriesController extends Controller
     public function show($slug)
     {
         $data = LabsCategory::where('slug', $slug)->first();
-        return response()->json($data, 200);
+        if($data != null)
+        {
+            return response()->json($data, 200);
+        }else{
+            return response()->json(['message' => 'catégorie innéxistante'], 404);
+        }
         
     }
 

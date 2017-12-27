@@ -12,7 +12,7 @@
         @endsection
 
         @section('social')
-            @if(isset($data))
+            @if(isset($data) && !empty($data))
                 <!-- Open Graph data -->
                 <meta property="og:title" content="{{ $data->title }}" />
                 <meta property="og:type" content="article" />

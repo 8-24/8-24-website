@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\Gallery;
-use App\Work;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class ErrorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,10 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome', ['seo_description' =>"8-24 agence, page d'erreur 404", 
+                                'seo_author' => "", 
+                                'seo_keywords' => "8-24, agence, error, 404", 
+                                'seo_cover' => ""]);
     }
 
     /**
@@ -45,12 +46,9 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        // TODO test
-        $data = Work::where('slug', $slug)->first();
-        return response()->json($data, 200);
-
+        //
     }
 
     /**

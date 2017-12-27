@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\LabsCategory;
-use App\LabsPost;
+use agence\LabsCategory;
+use agence\LabsPost;
+use agence\SeoPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,11 +27,20 @@ class LabsPostController extends Controller
     {
         $currenLink = $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $data = LabsPost::where('slug', $slug)->first();
+        if($data != null){
         return view('welcome', ['data' => $data,
             'seo_keywords' => $data->keywords,
             'seo_description' => $data->description,
             'current_link' => $currenLink
         ]);
+        }else{
+            $seo = SeoPage::where('slug', 'error-404')->first();
+            return view('welcome', ['data' => $data, 
+                                    'seo_keywords' => $seo->keywords,
+                                    'seo_description' => $seo->description, 
+                                    'seo_author' => $seo->author, 
+                                    'seo_cover' => $seo->cover]);
+        }
     }
 
     /**
@@ -105,7 +115,11 @@ class LabsPostController extends Controller
         //
         //return $slug;
         $data = LabsPost::where('slug', $slug)->first();
-        return response()->json($data, 200);
+        if($data != null){
+            return response()->json($data, 200);
+        }else{
+            return response()->json(['message' => 'Aucun Post trouvé :( '], 404);
+        }
     }
 
     /**

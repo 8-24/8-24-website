@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace agence\Http\Controllers;
 
-use App\Home;
-use App\SeoPage;
+use agence\Home;
+use agence\SeoPage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
