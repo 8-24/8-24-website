@@ -63,7 +63,9 @@ Route::group(['prefix' => '/admin',  'middleware' => 'auth'], function()
         Route::post('deleteLabsCategory', ['as' => 'deleteLabsCategory', 'uses' => 'LabsCategoriesController@destroy']);
         Route::get('/labs/categories/edit/{id}', 'LabsCategoriesController@adminShow');
         Route::get('/labs/posts', 'LabsPostController@adminIndex');
+        Route::get('/labs/post/edit/{id}', 'LabsPostController@adminShow');
         Route::post('addLabPost', ['as' => 'addLabPost', 'uses' => 'LabsPostController@store']);
+        Route::post('editLabPost', ['as' => 'editLabPost', 'uses' => 'LabsPostController@update']);
         
         /* Contact message */
         Route::get('/contact', 'ContactController@adminIndex');

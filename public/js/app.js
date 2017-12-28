@@ -73379,6 +73379,7 @@ var LabsCategory = function (_Component) {
           { className: 'row' },
           this.PostsList(this.state.posts)
         ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
           { to: '/labs' },

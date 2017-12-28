@@ -68,6 +68,7 @@ export default class LabsCategory extends Component{
         <div className="row">
             {this.PostsList(this.state.posts)}
         </div>
+        <hr/>
         <Link to="/labs">
           <img src="/img/arrow_back_white.svg"  className="arrow-back" />
         </Link>

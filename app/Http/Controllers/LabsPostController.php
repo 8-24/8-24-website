@@ -19,6 +19,12 @@ class LabsPostController extends Controller
 
     }
 
+    public function adminShow($id){
+        $data = LabsPost::where('id', $id)->first();
+        $categories = LabsCategory::all();
+        return view('admin.labs.posts.edit', ['data' => $data, 'categories' => $categories]);
+    }
+
     /**
      * Display the resource to the server rendering.
      */
@@ -150,9 +156,25 @@ class LabsPostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request['id'];
+        $title = $request['title'];
+        $slug = str_slug($title, '-');
+        $description = $request['description'];
+        $keywords = $request['keywords'];
+        $content = $request['content'];
+        $cover = $request['cover'];
+        $categoryId = $request['category_id'];
+        LabsPost::where('id', $id)
+        ->update(['title' => $title, 
+                  'slug' => $slug, 
+                  'keywords' => $keywords, 
+                  'description' => $description, 
+                  'content' => $content,
+                  'cover' => $cover,
+                  'category_id' => $categoryId]);
+        return redirect()->back();          
     }
 
     /**
