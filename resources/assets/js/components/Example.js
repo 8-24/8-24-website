@@ -79,7 +79,6 @@ export default class Example extends Component {
                   <div className="twelve columns">
                       <div id="main-nav-wrap" className=""></div>
                       <nav className="navbar" id="">
-                        <div className="row">
                           <div className="nav-logo-wrapper">
                               <Link to="/" id="nav-default-logo">
                                   <img id="nav-default-logo-img" className="u-full-width nav-logo" src="/img/logo.svg" alt="8-24 agence logo"/>
@@ -100,7 +99,6 @@ export default class Example extends Component {
                                   <img id="yellow-burger" className="u-full-width" src="/img/menu_burger_yellow.svg" alt=""/>
                               </div>
                           </div>
-                        </div>
                         <div id="display-nav" className="hidden-nav">
                           <li className="twelve columns"  onClick={this.navInteract} >
                             <img className="close-nav-btn" id="close-nav-btn-red" src="/img/close_menu-red.svg" />

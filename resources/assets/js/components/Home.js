@@ -51,7 +51,7 @@ export default class Home extends Component{
     return(
       <div>
         <div className="margin-top-hundred">
-          <div className="row">
+          <div className="row" id="home-sections">
             {this.sectionList(this.state.sections)}
           </div>
           <p>

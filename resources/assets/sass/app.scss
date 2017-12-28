@@ -110,6 +110,7 @@ h2{
   position: absolute;
 
 }
+
 /* nav bar */
 .navbar{
   position: fixed;
@@ -132,8 +133,6 @@ h2{
   height: 100vh;
   display: block;
   text-align: center;
-  left: -25%;
-  
 }
 .grey-nav{
   color: black!important;
@@ -259,7 +258,6 @@ h2{
   cursor: pointer;
   }
 }
-
 @keyframes apparitionMoveLeft{
   0%   {padding-left: 15%;}
   100%   {padding-left: 0%;}
@@ -271,12 +269,11 @@ h2{
   .nav-burger{
     float: right;
     margin-top: 10px;
-    width: 10%;
+    width: 5%;
   }
   .home-section-title-wrap{
     float: left;
     a{
-
       &:active{
         text-decoration: none;
       }
@@ -285,6 +282,7 @@ h2{
       }
     }
   }
+
   .close-nav-btn{
     width: 3%;
     -webkit-transition: 100ms;
@@ -304,6 +302,9 @@ h2{
     width: 40%;
     float: left;
   }
+  .displayed-nav{
+    left: 0%;
+  }
 
 }
 /* Larger than tablet */
@@ -320,7 +321,7 @@ h2{
   }
   .nav-burger{
     float: right;
-    margin-top: -30px;
+    margin-top: -5px;
     width: 13%;
 
   }
@@ -350,6 +351,9 @@ h2{
     width: 40%;
     float: left;
   }
+  .displayed-nav{
+    left: -15%;
+  }
 }
 
 /* Larger than Desktop HD */
@@ -364,6 +368,10 @@ h2{
   }
   #side-nav-responsive{
     display: none;
+  }
+
+  .displayed-nav{
+    left: -15%;
   }
 
 }

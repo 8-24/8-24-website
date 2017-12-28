@@ -47336,40 +47336,36 @@ var Example = function (_Component) {
                 { className: 'navbar', id: '' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'div',
-                  { className: 'row' },
+                  { className: 'nav-logo-wrapper' },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+                    { to: '/', id: 'nav-default-logo' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'nav-default-logo-img', className: 'u-full-width nav-logo', src: '/img/logo.svg', alt: '8-24 agence logo' })
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+                    { to: '/labs', id: 'nav-lab-logo' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width ', src: '/img/lab_logo.png', alt: '8-24 laboratory logo' })
+                  ),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'nav-logo-wrapper' },
+                    { id: 'side-nav-responsive' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                      { to: '/', id: 'nav-default-logo' },
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'nav-default-logo-img', className: 'u-full-width nav-logo', src: '/img/logo.svg', alt: '8-24 agence logo' })
+                      { to: '/', id: 'side-nav-responsive-home-logo' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/logo_white.svg', alt: '8-24, agence logo' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                      { to: '/labs', id: 'nav-lab-logo' },
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width ', src: '/img/lab_logo.png', alt: '8-24 laboratory logo' })
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'div',
-                      { id: 'side-nav-responsive' },
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                        { to: '/', id: 'side-nav-responsive-home-logo' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/logo_white.svg', alt: '8-24, agence logo' })
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                        { to: '/labs', id: 'side-nav-responsive-labs-logo' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/lab_logo.svg', alt: '8-24, agence lab logo' })
-                      )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'div',
-                      { id: 'nav-burger', className: 'nav-burger', onClick: this.navInteract },
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'red-burger', className: 'u-full-width', src: '/img/menu_burger.svg', alt: '' }),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'yellow-burger', className: 'u-full-width', src: '/img/menu_burger_yellow.svg', alt: '' })
+                      { to: '/labs', id: 'side-nav-responsive-labs-logo' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'u-full-width nav-logo', src: '/img/lab_logo.svg', alt: '8-24, agence lab logo' })
                     )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { id: 'nav-burger', className: 'nav-burger', onClick: this.navInteract },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'red-burger', className: 'u-full-width', src: '/img/menu_burger.svg', alt: '' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'yellow-burger', className: 'u-full-width', src: '/img/menu_burger_yellow.svg', alt: '' })
                   )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -62954,7 +62950,7 @@ var Home = function (_Component) {
           { className: 'margin-top-hundred' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'row' },
+            { className: 'row', id: 'home-sections' },
             this.sectionList(this.state.sections)
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
