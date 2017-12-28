@@ -18,7 +18,6 @@ export default class Home extends Component{
     var email = document.getElementById('message-mail').value;
     var content = document.getElementById('message-content').value;
     if(content != "" && content != null && email != "" && email != null){
-
       if(this.validateEmail(email))
       {
         var apiKey = document.getElementsByName('csrf-token').value;
@@ -32,6 +31,7 @@ export default class Home extends Component{
           .then((response) => {
             document.getElementById('contact-success-message').className = '';
             document.getElementById('message-mail').className = 'invisible-bg u-full-width';
+            document.getElementById('contact-form').style.display = 'none';
           })
           .catch((error) => {
             alert("Une erreur s'est produite du côté de nos serveurs, veuillez rafraîchir la page et réessayer.");
@@ -50,11 +50,13 @@ export default class Home extends Component{
         <h1>Contact</h1>
         <div className="row">
           <div className="six columns">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto aut cumque eaque eum, facere fugiat inventore ipsa molestias mollitia nam necessitatibus numquam quam quisquam rem tempora tempore tenetur.</p>
+            <p>
+            Si vous avez besoin de plus d'informations, si vous désirez nous soumettre un projet, un brief, un concours. Ou si vous voulez obtenir un portfolio de notre agence ou simplement nous écrire, nous sommes toujours à votre disposition.
+            </p>
           </div>
           <div className="six columns">
             <div id="contact-success-message" className="hidden">
-              <h2>Envoi réussi</h2>
+                <img src="/img/checkmark.png" className="u-full-width checkmark" />
               <p>Nous avons bien reçu votre message, notre équipe vous répondra à l'adresse e-mail laissée au plus vite ;)</p>
             </div>
             <form action="" id="contact-form">

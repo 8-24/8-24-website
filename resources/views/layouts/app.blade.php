@@ -19,5 +19,6 @@
         @yield('content')
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.0.0-9/collection/icon/svg/ios-checkmark.js"></script>
 </body>
 </html>
