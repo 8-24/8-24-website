@@ -51,7 +51,7 @@ export default class Home extends Component{
         <div className="row">
           <div className="six columns">
             <p>
-            Si vous avez besoin de plus d'informations, si vous désirez nous soumettre un projet, un brief, un concours. Ou si vous voulez obtenir un portfolio de notre agence ou simplement nous écrire, nous sommes toujours à votre disposition.
+            Si vous avez besoin de plus d'informations, si vous désirez nous soumettre un projet. Si vous avez une simple question concernant nos travaux ou notre équipe, nous sommes toujours à votre disposition.
             </p>
           </div>
           <div className="six columns">

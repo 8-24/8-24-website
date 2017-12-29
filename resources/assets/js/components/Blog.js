@@ -78,7 +78,9 @@ export default class Blog extends Component{
     return(
       <div className="margin-top-hundred">
         <h1>Blog</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto aut cumque eaque eum, facere fugiat inventore ipsa molestias mollitia nam necessitatibus numquam quam quisquam rem tempora tempore tenetur.</p>
+        <p>
+        Notre espace blog est un lieux de partage. Nous y postons régulièrement nos points de vue, nos idées et astuces sur les technologies du web ou simplement quelques retours d'expérience.
+        </p>
         <div className="row">
           {this.PostsList(this.state.posts)}
         </div>

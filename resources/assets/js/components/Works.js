@@ -90,7 +90,7 @@ export default class Works extends Component {
           <div className="">
             <h1>Works</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid doloribus eius fugit hic itaque mollitia nihil soluta velit veniam? Assumenda enim et harum magnam magni, officia perferendis velit voluptate!
+              Quelques uns des travaux réalisés pour nos clients et des collaborations avec des artistes.
               <br/>
             </p>
             <div className="row">
