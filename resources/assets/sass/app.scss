@@ -1,6 +1,6 @@
 @import "variables";
 body{
-  background-color: #0a3544;
+  background-color: #ececec;
   margin: 1px;
   font-family: $font-reg, Helvetica, Arial, sans-serif;
   margin:0px;
@@ -52,8 +52,9 @@ video {
 }
 .yellow-color{
   color: $yellow;
-  font-size: 54px;
+  font-size: 5em;
   font-family: $font-bold, Helvetica, Arial, sans-serif;
+  letter-spacing: 6px;
 }
 .violet-color{
   color: $violet;
@@ -140,7 +141,8 @@ video {
 .navbar{
   position: fixed;
   top: 0px;
-  width:73%;
+  width:65%;
+  margin-top: 3%;
 }
 #nav-burger:hover{
   stroke: black!important;
@@ -158,7 +160,8 @@ video {
   height: 100vh;
   display: block;
   text-align: center;
-}
+  padding-top: 4%;
+  margin-bottom: -1%;
 .grey-nav{
   color: black!important;
   background-color:$grey;
@@ -177,7 +180,7 @@ video {
 }
 .display-logo-bg{
   width: 100%;
-  height: 8%;
+  height: 24%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -186,6 +189,9 @@ video {
 }
 #display-nav li{
   list-style-type: none;
+margin-right: 10%;
+  text-align: center;
+  margin-bottom: -1%;
 }
 #display-nav a:hover{
   transition: 100ms;
@@ -206,9 +212,11 @@ video {
   display: none;
 }
 .displayed-nav a{
-  color:black;
-  font-size: 64px;
+  color:$menucolor!important;
+  font-size: 60px;
   text-decoration: none;
+  font-variant: all-small-caps;
+
 }
 .hidden-nav{
   display: none;
@@ -220,7 +228,7 @@ video {
 }
 .home-section-link{
   transition: 100ms;
-  font-size: 54px;
+  font-size: 5em;
   font-family: $font-bold, Helvetica, Arial, sans-serif;
 }
 .labs-section-link{
@@ -239,7 +247,8 @@ video {
 }
 .home-section-link-active{
   transition: 100ms;
-  color: $red!important;
+  color: $violet!important;
+  font-size: 5em;
 }
 .page-content{
   margin-top:80px;
@@ -294,7 +303,7 @@ video {
   .nav-burger{
     float: right;
     margin-top: 10px;
-    width: 5%;
+    width: 7%;
   }
   .home-section-title-wrap{
     float: left;
@@ -309,12 +318,11 @@ video {
   }
 
   .close-nav-btn{
-    width: 3%;
+
     -webkit-transition: 100ms;
     transition: 100ms;
     position: fixed;
-    right: 10%;
-    top: 5%;
+    top: 15%;
     &:hover{
     cursor: pointer;
     }
@@ -328,7 +336,7 @@ video {
     float: left;
   }
   .displayed-nav{
-    left: 0%;
+    left: -24%;
   }
 
 }
@@ -339,6 +347,7 @@ video {
     top: 0px;
     width: 90%;
     margin-right: 10%;
+
   }
   #side-nav-home-logo{
     display: none;
@@ -369,8 +378,8 @@ video {
     -webkit-transition: 100ms;
     transition: 100ms;
     position: fixed;
-    right: 5%;
-    top: 5%;
+    right: 16.5%;
+    top: 7%!important;
   }
   .close-nav-btn:hover{
     cursor: pointer;
@@ -386,7 +395,7 @@ video {
     float: left;
   }
   .displayed-nav{
-    left: -15%;
+    left: -24%;
   }
 }
 
@@ -405,7 +414,7 @@ video {
   }
 
   .displayed-nav{
-    left: -15%;
+    left: -24%;
   }
 
 }

@@ -19,7 +19,8 @@
 }
 
 body {
-  background-color: #0a3544;
+  background-color: #ececec;
+  margin: 1px;
   font-family: "SansProReg", Helvetica, Arial, sans-serif;
   margin: 0px;
   cursor: url(/images/cursor_violet.png?0ebc0d821817bd17c34d464ac62aa239), pointer;
@@ -78,8 +79,9 @@ video {
 
 .yellow-color {
   color: #e5e642;
-  font-size: 54px;
+  font-size: 5em;
   font-family: "SansProBold", Helvetica, Arial, sans-serif;
+  letter-spacing: 6px;
 }
 
 .violet-color {
@@ -181,7 +183,8 @@ video {
 .navbar {
   position: fixed;
   top: 0px;
-  width: 73%;
+  width: 65%;
+  margin-top: 3%;
 }
 
 #nav-burger:hover {
@@ -206,7 +209,7 @@ video {
 
 .grey-nav {
   color: black !important;
-  background-color: #eaeaea;
+  background-color: #ececec;
 }
 
 .black-nav {
@@ -224,7 +227,7 @@ video {
 
 .display-logo-bg {
   width: 100%;
-  height: 8%;
+  height: 24%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -234,6 +237,8 @@ video {
 
 #display-nav li {
   list-style-type: none;
+  margin-right: 10%;
+  text-align: center;
 }
 
 #display-nav a:hover {
@@ -252,7 +257,7 @@ video {
   height: 100%;
   position: absolute;
   z-index: 2;
-  background-color: #eaeaea;
+  background-color: #ececec;
 }
 
 .hidden-nav-bg {
@@ -260,9 +265,10 @@ video {
 }
 
 .displayed-nav a {
-  color: black;
+  color : #404040;
   font-size: 64px;
   text-decoration: none;
+  font-variant: all-small-caps;
 }
 
 .hidden-nav {
@@ -278,8 +284,11 @@ video {
 .home-section-link {
   -webkit-transition: 100ms;
   transition: 100ms;
-  font-size: 54px;
+  font-size: 5em;
   font-family: "SansProBold", Helvetica, Arial, sans-serif;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: 0.01s; /* émarre au bout de 0,4s */
 }
 
 .labs-section-link {
@@ -297,14 +306,15 @@ video {
 .home-section-link:hover {
   -webkit-transition: 100ms;
   transition: 100ms;
-  color: #ff0067 !important;
+  color: #5d22ba !important;
   cursor: pointer;
 }
 
 .home-section-link-active {
   -webkit-transition: 100ms;
   transition: 100ms;
-  color: #ff0067 !important;
+  color: #5d22ba;
+  font-size: 5em;
 }
 
 .page-content {
@@ -395,7 +405,7 @@ video {
   .nav-burger {
     float: right;
     margin-top: 10px;
-    width: 5%;
+    width: 7%;
   }
 
   .home-section-title-wrap {
@@ -411,12 +421,12 @@ video {
   }
 
   .close-nav-btn {
-    width: 3%;
+    width: 2%;
     -webkit-transition: 100ms;
     transition: 100ms;
     position: fixed;
-    right: 10%;
-    top: 5%;
+    right: 16.5%;
+    top: 7%;
   }
 
   .close-nav-btn:hover {
@@ -434,7 +444,7 @@ video {
   }
 
   .displayed-nav {
-    left: 0%;
+    left: -22%;
   }
 }
 
@@ -506,7 +516,7 @@ video {
   }
 
   .displayed-nav {
-    left: -15%;
+    left: -22%;
   }
 }
 
@@ -528,7 +538,7 @@ video {
   }
 
   .displayed-nav {
-    left: -15%;
+    left: -24%;
   }
 }
 
