@@ -1,13 +1,33 @@
 @import "variables";
 body{
+
+  background-color: $grey;
   background-color: #ececec;
   margin: 1px;
   font-family: $font-reg, Helvetica, Arial, sans-serif;
   margin:0px;
   cursor: url('../../../public/img/cursor_violet.png'),pointer;
+  text-align: justify;
 }
 h2{
   font-family: $font-reg, Helvetica, Arial, sans-serif;
+  text-align: justify;
+}
+img#yellow-burger {
+  cursor: pointer;
+  width: 50%;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  &:hover{
+    cursor: pointer;
+    width: 58%;
+    -webkit-transition-property: width;
+    transition-property: width;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
 }
 video {
   width: 100%    !important;
@@ -65,7 +85,12 @@ video {
 .white-background{
   width:100%;
   height: 100%;
+
+
+  background: url("../../../public/img/fond_desk_content_cprs.jpeg") no-repeat center center;
+
   /*background: url("../../../public/img/fond_desk_content_cprs.jpeg") no-repeat center center;*/
+
   background-attachment: fixed;
 }
 .black-background{
@@ -96,11 +121,12 @@ video {
 #nav-default-logo, #nav-lab-logo{
   width: max-content;
   float: left;
+
 }
 #nav-lab-logo img{
   width: 90%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 #side-nav-home-logo{
   position: fixed;
@@ -121,7 +147,7 @@ video {
 .nav-logo{
   width: 30%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 #cnv{
   width: 100%;
@@ -140,9 +166,15 @@ video {
 /* nav bar */
 .navbar{
   position: fixed;
+
+  top: 3%;
+  width:80%;
+
+
   top: 0px;
   width:65%;
   margin-top: 3%;
+
 }
 #nav-burger:hover{
   stroke: black!important;
@@ -160,17 +192,31 @@ video {
   height: 100vh;
   display: block;
   text-align: center;
+
+  left: -32%;
+  padding-top: 10%;
+}
+
   padding-top: 4%;
   margin-bottom: -1%;
+
 .grey-nav{
-  color: black!important;
-  background-color:$grey;
+  color: black !important;
+  background-color: #ededed;
+  line-height: 4;
+  -webkit-box-shadow: 20px 20px 20px #FC0;
+  box-shadow: -1px -8px 31px #7b7b7b;
+  z-index: 0;
 
 }
 
 .black-nav{
   color:$white;
   background-color: $body-black-bg;
+  -webkit-box-shadow: 20px 20px 20px #FC0;
+  box-shadow: -1px -8px 31px #f34966;
+  line-height: 4;
+  z-index: 0;
   a {
     color: $white!important;
     &:hover{
@@ -180,12 +226,16 @@ video {
 }
 .display-logo-bg{
   width: 100%;
+
+  height: 15%;
+
   height: 24%;
+
   position: fixed;
   top: 0px;
   left: 0px;
-  -webkit-transition: height 1s; 
-  transition: height 1s;
+  -webkit-transition: height 2s;
+  transition: height 2s;
 }
 #display-nav li{
   list-style-type: none;
@@ -194,8 +244,12 @@ margin-right: 10%;
   margin-bottom: -1%;
 }
 #display-nav a:hover{
-  transition: 100ms;
+
+  transition-property: color,font-size;
+  transition-duration: 0.3s;
+  font-size: 55px;
   color: $red!important;
+  cursor: cur;
 }
 #display-nav-bg{
   width: 100%;
@@ -212,10 +266,20 @@ margin-right: 10%;
   display: none;
 }
 .displayed-nav a{
+
+  color:#3e3e3e;
+  transition-property: color,font-size;
+  transition-duration: 0.5s;
+  font-size: 50px;
+  text-decoration: none;
+  line-height: 1px;
+  font-variant:all-small-caps;
+
   color:$menucolor!important;
   font-size: 60px;
   text-decoration: none;
   font-variant: all-small-caps;
+
 
 }
 .hidden-nav{
@@ -228,7 +292,11 @@ margin-right: 10%;
 }
 .home-section-link{
   transition: 100ms;
+
+  font-size: 64px;
+
   font-size: 5em;
+
   font-family: $font-bold, Helvetica, Arial, sans-serif;
 }
 .labs-section-link{
@@ -242,14 +310,17 @@ margin-right: 10%;
 }
 .home-section-link:hover{
   transition: 100ms;
-  color: $red!important;
+  color: $violet!important;
   cursor: pointer;
 }
 .home-section-link-active{
   transition: 100ms;
   color: $violet!important;
+
   font-size: 5em;
+
 }
+
 .page-content{
   margin-top:80px;
   min-height: 100vh;
@@ -284,12 +355,20 @@ margin-right: 10%;
   border-color: #ff0066!important;
 }
 .arrow-back{
-  width: 10%;
+  width: 4%;
+  margin-top: 3%;
   padding-left: 0%;
   animation-name: apparitionMoveLeft;
   animation-duration: 2s;
+  transition-property: width,opacity;
+  transition-duration: 0.7s;
+  opacity: 0.3;
   &:hover{
   cursor: pointer;
+    width: 4.5%;
+   transition-property: width, opacity;
+    opacity: 0.9;
+    color: $red;
   }
 }
 @keyframes apparitionMoveLeft{
@@ -305,8 +384,23 @@ margin-right: 10%;
     margin-top: 10px;
     width: 7%;
   }
+  h2{
+    font-size: 2.5em!important;
+    margin-top: 10px;
+    text-align: left;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+  }
+  .navbar{
+    width: 80%;
+  }
   .home-section-title-wrap{
     float: left;
+    line-height: 3.5em;
     a{
       &:active{
         text-decoration: none;
@@ -319,10 +413,19 @@ margin-right: 10%;
 
   .close-nav-btn{
 
+    width: 2.5%;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    position: fixed;
+    right: 19%;
+    top: 5%;
+
+
     -webkit-transition: 100ms;
     transition: 100ms;
     position: fixed;
     top: 15%;
+
     &:hover{
     cursor: pointer;
     }
@@ -336,7 +439,38 @@ margin-right: 10%;
     float: left;
   }
   .displayed-nav{
+
+    left: -14%;
+  }
+  .navbar{
+    top:0;
+    width: 80%;
+    padding-top: 3%;
+    position: fixed;
+  }
+  #red-burger{
+    width: 50%;
+    transition-property: width;
+    transition-duration:0.5s ;
+    &:hover{
+      cursor: pointer;
+      width: 58%;
+      transition-property: width;
+      transition-duration: 0.2s;
+
+    }
+  }
+  .close-nav-btn{
+    width: 2.5%;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+    position: fixed;
+    right: 18%;
+    top: 4.5%;
+
+
     left: -24%;
+
   }
 
 }
@@ -344,10 +478,25 @@ margin-right: 10%;
 @media (max-width: 750px) {
   .navbar {
     position: fixed;
-    top: 0px;
-    width: 90%;
+    padding-top: 3%;
+    width: 80%;
     margin-right: 10%;
 
+  }
+  .arrow-back{
+    width:10%;
+
+  }
+  h2{
+    font-size: 2em!important;
+    margin-top: 10px;
+    text-align: left;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
   }
   #side-nav-home-logo{
     display: none;
@@ -356,16 +505,19 @@ margin-right: 10%;
     display: none;
   }
   #nav-default-logo{
-    width: 30%;
+    width: 40%;
+  }
+  #red-burger{
+    width: 75%;
   }
   .nav-logo{
     float: left;
-    width: 100%;
+    width: 65%;
   }
   .nav-burger{
     float: right;
     margin-top: 8px;
-    width: 12%;
+    width: 10%;
   }
   .nav-burger:hover{
     cursor: pointer;
@@ -374,12 +526,17 @@ margin-right: 10%;
     float: left;
   }
   .close-nav-btn{
-    width: 15%;
+    width: 5%;
     -webkit-transition: 100ms;
     transition: 100ms;
     position: fixed;
+
+    right: 20%;
+    top: 5%;
+
     right: 16.5%;
     top: 7%!important;
+
   }
   .close-nav-btn:hover{
     cursor: pointer;
@@ -395,17 +552,33 @@ margin-right: 10%;
     float: left;
   }
   .displayed-nav{
+
+    left: -16%;
+
     left: -24%;
+
   }
+
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
+.navbar{
+  width:80%;
+}
+  h4{
+    font-size: 2em!important;
+  }
   #nav-burger {
     float: right;
-    width: 3%;
-    margin-top: 10px;
+    width: 5%;
+    margin-top: 0px;
+    margin-right: 20%;
   }
+  .container{
+    width: 80%;
+  }
+
   #side-nav-wrap{
     display: block;
   }
@@ -414,7 +587,69 @@ margin-right: 10%;
   }
 
   .displayed-nav{
+
+    left: -23%;
     left: -24%;
+  }
+
+}
+@media (max-width: 400px){
+  #nav-burger{
+    width: 80%;
+  }
+  .home-section-link{
+    font-size: 54px;
+    line-height: 1;
+  }
+  .arrow-back{
+    width: 9%;
+    margin-top: 3%;
+    padding-left: 0%;
+    animation-name: apparitionMoveLeft;
+    animation-duration: 2s;
+    transition-property: width,opacity;
+    transition-duration: 0.7s;
+    opacity: 0.3;
+    &:hover{
+      cursor: pointer;
+      width: 9.5%;
+      transition-property: width, opacity;
+      opacity: 0.9;
+      color: $red;
+    }
+  }
+
+}
+@media (max-width: 1200px){
+  .navbar{
+    width:80%;
+    top: 1%;
+  }
+  .arrow-back{
+    width: 7%;
+    margin-top: 3%;
+    padding-left: 0%;
+    animation-name: apparitionMoveLeft;
+    animation-duration: 2s;
+    transition-property: width,opacity;
+    transition-duration: 0.7s;
+    opacity: 0.3;
+    &:hover{
+      cursor: pointer;
+      width: 7.5%;
+      transition-property: width, opacity;
+      opacity: 0.9;
+      color: $red;
+    }
+  }
+  #nav-burger {
+    float: right;
+    width: 10%;
+    margin-top: 0px;
+    margin-right: 0;
+  }
+  .container{
+    width: 80%;
   }
 
 }
