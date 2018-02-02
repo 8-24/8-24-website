@@ -43,10 +43,10 @@
                         <a class="nav-link" href="/admin/blog"><i class="icon-puzzle"></i>Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/labs/categories"><i class="icon-puzzle"></i>Labs catégories</a>
+                        <a class="nav-link" href="/admin/labs/categories"><i class="icon-puzzle"></i>Labo catégories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/labs/posts"><i class="icon-puzzle"></i>Labs posts</a>
+                        <a class="nav-link" href="/admin/labs/posts"><i class="icon-puzzle"></i>Labo posts</a>
                     </li>
                     </li>
                     <li class="nav-item">
