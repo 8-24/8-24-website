@@ -4,8 +4,8 @@
 * @param {string}  logoColor - violet or black
 */
 export function NavBarLogic(mode, page, logoColor){
-    var violetLogo = "/img/logo.svg";
-    var blackLogo = "/img/logo_black.svg";
+    var violetLogo = "/img/logo_home-02.svg";
+    var blackLogo = "/img/logo_aye-02.svg";
     if(mode == "black"){
         var wrap = document.getElementById("app-agile-container");
         if(page == 'illustration'){
