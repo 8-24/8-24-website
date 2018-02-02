@@ -9,8 +9,8 @@
     @yield('social')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" type="image/png" href="img/fav.png" width="27px" height="10px"/>
-    <title>8-24 agence</title>
+    <link rel="icon" type="image/png" href="img/fav-04.png" width="30px" height="30px"/>
+    <title>aye communication</title>
     <link href="{{ asset('css/skel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -20,5 +20,6 @@
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.0.0-9/collection/icon/svg/ios-checkmark.js"></script>
+    <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="e46f57ab-96ed-4432-a541-d1044f314c38";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
 </body>
 </html>

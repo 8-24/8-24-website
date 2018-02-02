@@ -15,7 +15,7 @@ export default class LabsPost extends Component{
     NavBarLogic("black", "color");
     window.scrollTo(0, 0);
     var path = this.props.location.pathname;
-    axios.get('http://127.0.0.1:8000/api/labs/posts/'+this.props.match.params.slug)
+    axios.get('https://www.8-24.ch/api/labs/posts/'+this.props.match.params.slug)
       .then(response => {
         this.setState({post: response.data});
       }).catch(error => {

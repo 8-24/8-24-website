@@ -15,12 +15,12 @@ export default class Blog extends Component{
     NavBarLogic("grey", "color", "black");
     window.scrollTo(0, 0);
     if(this.props.display == "preview") {
-      axios.get('http://127.0.0.1:8000/api/blog/limit/4')
+      axios.get('https://www.8-24.ch/api/blog/limit/4')
         .then(response => {
           this.setState({posts: response.data})
         });
     }else{
-      axios.get('http://127.0.0.1:8000/api/blog/limit/400')
+      axios.get('https://www.8-24.ch/api/blog/limit/400')
         .then(response => {
           this.setState({posts: response.data})
         });
@@ -78,7 +78,7 @@ export default class Blog extends Component{
     return(
       <div className="margin-top-hundred">
         <h1>Blog</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi architecto aut cumque eaque eum, facere fugiat inventore ipsa molestias mollitia nam necessitatibus numquam quam quisquam rem tempora tempore tenetur.</p>
+        <p>ici se trouve un coin de partage, ou nous publions régulièrement des articles sur différents domaines. Conseil technique, nouveautés web et tendances culturelles/graphiques, nous mettons à disposition,ici, une source de bonne informataion rempli de conseil pertinant,d'astuce en tout genre, dans des articles rapides à lire qui vous permetterons, nous l'éspèrons, de rester à jour sur les différentes façons de s'adapter au tendance et à la concurence.     </p>
         <div className="row">
           {this.PostsList(this.state.posts)}
         </div>

@@ -10,7 +10,7 @@ export default class BlogPost extends Component{
   componentDidMount()
   {
     var path = this.props.location.pathname;
-    axios.get('http://127.0.0.1:8000/api'+path)
+    axios.get('https://www.8-24.ch/api'+path)
     .then(response => {
       this.setState({post: response.data})
     }).catch(error => {

@@ -21,7 +21,7 @@
                 @endif
                 <meta property="og:image" content="{{ asset($data->cover) }}" />
                 <meta property="og:description" content="{{$data->description}}" />
-                <meta property="og:site_name" content="8-24 agence" />
+                <meta property="og:site_name" content="aye communication web" />
                 <meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
                 <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />
                 <meta property="article:section" content="{{ $data->description }}" />

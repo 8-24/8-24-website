@@ -17,13 +17,13 @@ export default class LabsCategory extends Component{
     NavBarLogic("black", "color");
     window.scrollTo(0, 0);
     var slugCat = this.props.match.params.category;
-    axios.get('http://127.0.0.1:8000/api/labs/categories/'+slugCat)
+    axios.get('https://www.8-24.ch/api/labs/categories/'+slugCat)
       .then(response => {
         this.setState({category: response.data})
       }).catch(error => {
         this.props.history.push('/labs');
       });
-    axios.get('http://127.0.0.1:8000/api/labs/'+slugCat+'/posts')
+    axios.get('https://www.8-24.ch/api/labs/'+slugCat+'/posts')
       .then(response => {
         this.setState({posts: response.data})
       }).catch(error => {

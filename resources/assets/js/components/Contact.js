@@ -27,7 +27,7 @@ export default class Home extends Component{
         };
 
         // mail valid
-        axios.post('http://127.0.0.1:8000/api/add-contact-message', data)
+        axios.post('https://www.8-24.ch/api/add-contact-message', data)
           .then((response) => {
             document.getElementById('contact-success-message').className = '';
             document.getElementById('message-mail').className = 'invisible-bg u-full-width';

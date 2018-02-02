@@ -19,7 +19,7 @@ export default class Home extends Component{
   componentDidMount(){
     NavBarLogic("grey", "illustration", "violet");
     window.scrollTo(0, 0);
-    axios.get('http://127.0.0.1:8000/api/home')
+    axios.get('https://www.8-24.ch/api/home')
       .then(response => {
         this.setState({sections: response.data})
       });
@@ -56,7 +56,7 @@ export default class Home extends Component{
           </div>
           <p>
             <h2>
-              Nous ne sommes pas "low-coast", juste hônnetes.
+              Nous dessinons votre image, assurons votre présence sur le web, soulagons votre budget !
             </h2>
           </p>
           <p>
@@ -66,15 +66,14 @@ export default class Home extends Component{
           </p>
         </div>
         <div className="row">
-          <Works display={"preview"} />
+          <Works key={1} display={"preview"} />
         </div>
         <div className="row">
-          <Blog display={"preview"} />
+          <Blog key={2} display={"preview"} />
         </div>
-        <div className="row">
-          <Contact />
+        <Contact key={3} className="row-contact"/>
         </div>
-      </div>
     )
   }
 }
+

@@ -19,13 +19,13 @@ export default class Works extends Component {
     NavBarLogic("grey", "color", "black");
     window.scrollTo(0, 0);
     if(this.props.display == "preview"){
-      axios.get('http://127.0.0.1:8000/api/works/limit/4')
+      axios.get('https://www.8-24.ch/api/works/limit/4')
         .then(response => {
           this.setState({works: response.data})
         });
     }else{
 
-      axios.get('http://127.0.0.1:8000/api/works/limit/400')
+      axios.get('https://www.8-24.ch/api/works/limit/400')
         .then(response => {
           this.setState({works: response.data})
         });
