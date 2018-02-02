@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
@@ -69,10 +70,10 @@ export default class Example extends Component {
               <div id="app-agile-container" className="white-background">
               <div id="side-nav-wrap">
                 <Link to="/" id="side-nav-home-logo">
-                  <img className="u-full-width nav-logo" src="/img/logo_white.svg" alt="8-24, agence logo"/>
+                  <img className="u-full-width nav-logo" src="/img/aye_logo.svg" alt="aye communication logo"/>
                 </Link>
                 <Link to="/labs" id="side-nav-labs-logo">
-                  <img className="u-full-width nav-logo" src="/img/lab_logo.svg" alt="8-24, agence lab logo"/>
+                  <img className="u-full-width nav-logo" src="/img/lab_logo-02-02-02.svg" alt="aye communication logo"/>
                 </Link>
               </div>
                 <div className="container">
@@ -81,22 +82,22 @@ export default class Example extends Component {
                       <nav className="navbar" id="">
                           <div className="nav-logo-wrapper">
                               <Link to="/" id="nav-default-logo">
-                                  <img id="nav-default-logo-img" className="u-full-width nav-logo" src="/img/logo.svg" alt="8-24 agence logo"/>
+                                  <img id="nav-default-logo-img" className="u-full-width nav-logo" src="/img/logo.svg" alt="aye communication logo web"/>
                               </Link>
                               <Link to="/labs" id="nav-lab-logo">
-                                <img className="u-full-width " src="/img/lab_logo.png" alt="8-24 laboratory logo"/>
+                                <img className="u-full-width " src="/img/lab_logo-02-02-02.svg" alt="aye communication logo web"/>
                                </Link>
                                <div id="side-nav-responsive">
                                 <Link to="/" id="side-nav-responsive-home-logo">
-                                  <img className="u-full-width nav-logo" src="/img/logo_white.svg" alt="8-24, agence logo"/>
+                                  <img className="u-full-width nav-logo" src="/img/aye_logo.svg" alt="aye communication logo"/>
                                 </Link>
                                 <Link to="/labs" id="side-nav-responsive-labs-logo">
-                                  <img className="u-full-width nav-logo" src="/img/lab_logo.svg" alt="8-24, agence lab logo"/>
+                                  <img className="u-full-width nav-logo" src="/img/lab_logo-02-02-02.svg" alt="aye communication lab logo web"/>
                                 </Link>
                               </div>
                               <div id="nav-burger" className="nav-burger" onClick={this.navInteract}>
-                                  <img id="red-burger" className="u-full-width" src="/img/menu_burger.svg" alt=""/>
-                                  <img id="yellow-burger" className="u-full-width" src="/img/menu_burger_yellow.svg" alt=""/>
+                                  <img id="red-burger" className="u-full-width" src="/img/menu_burger.svg" alt="aye communication web "/>
+                                  <img id="yellow-burger" className="u-full-width" src="/img/menu_burger_yellow.svg" alt="aye commmunication web"/>
                               </div>
                           </div>
                         <div id="display-nav" className="hidden-nav">
@@ -108,7 +109,7 @@ export default class Example extends Component {
                               <li><Link onClick={this.navInteract} to="/">Home</Link></li>
                               <li><Link onClick={this.navInteract} to="/works">Works</Link></li>
                               <li><Link onClick={this.navInteract} to="/blog">Blog</Link></li>
-                              <li><Link onClick={this.navInteract} to="/labs">Labs</Link></li>
+                              <li><Link onClick={this.navInteract} to="/labs">Labo</Link></li>
                               <li><Link onClick={this.navInteract} to="/contact">Contact</Link></li>
                           </ul>
                         </div>
@@ -130,16 +131,25 @@ export default class Example extends Component {
                         <Route exact path="/labs/:category/:slug" component={LabsPost} />
                         <Route exact path="/contact" component={Contact}/>
                         <Route exact path="/error/404" component={Error404} /> 
-                      </AnimatedSwitch>  
+                      </AnimatedSwitch>
+
                       </div>
                   </div>
                 </div>
+                  <footer> 8/24 Agence Copyright © 2018 | all rights reserved | suivez-nous sur -
+                      <a href="https://www.facebook.com/hello824/"> facebook  </a> <a href="https://www.instagram.com/8_24agence/?hl=fr"> - instagram </a>  </footer>
               </div>
+
           </Router>
+
               );
             }
           }
+
+
+
 if (document.getElementById('example')) {
 //    <Route exact path="/labs/creative-coding" component={CreativeCoding} />
     ReactDOM.render(<Example />, document.getElementById('example'));
 }
+
